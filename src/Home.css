@@ -1,0 +1,309 @@
+/************* #COLORS *************/
+/* turquoise: #00f7ff */
+/* grey: #8A9099 */
+
+/************* #FONTS *************/
+@font-face {
+  font-family: "V-Ger Grotesque";
+  src: URL("../vger-bold.ttf") format("truetype");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/************* #RESET & NORMALIZE *************/
+@import-normalize;
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/************* #UNIVERSAL *************/
+body {
+  font-size: 5vw;
+  font-family: "Rubik", sans-serif;
+  font-weight: 800;
+}
+
+/************* #HEADER *************/
+header {
+  height: 100vh;
+  background-color: black;
+  color: white;
+}
+
+.circle {
+  background-color: #8a9099;
+  border-radius: 50%;
+}
+
+.circle-1 {
+  position: absolute;
+  top: -9vw;
+  left: -2.6vw;
+  height: 24vw;
+  width: 24vw;
+}
+
+.circle-2 {
+  position: absolute;
+  top: -3vw;
+  right: -12vw;
+  height: 46vw;
+  width: 46vw;
+}
+
+.header-k {
+  color: #00f7ff;
+}
+
+h1,
+h2 {
+  position: relative;
+  left: 14vw;
+  text-transform: uppercase;
+}
+
+h1 {
+  padding-top: 2vw;
+  font-size: 9vw;
+  font-family: "V-Ger Grotesque", sans-serif;
+  letter-spacing: 1rem;
+}
+
+h2 {
+  max-width: 42vw;
+  font-size: 5vw;
+  line-height: 1.3;
+}
+
+.pointer {
+  position: absolute;
+  top: 35vw;
+  left: 51vw;
+  width: 3.5vw;
+  transform: rotate(-13deg);
+}
+
+.whomever {
+  position: absolute;
+  top: 33.5vw;
+  left: 51vw;
+  transform: rotate(29deg);
+  font-size: 1vw;
+}
+
+.triangle {
+  height: 10vw;
+  border-right: 100vw solid black;
+  border-bottom: 150px solid transparent;
+}
+
+/************* #MAIN *************/
+main {
+  padding-top: 20vw;
+}
+
+.get-started {
+  position: relative;
+  bottom: 20vh;
+  left: 9vw;
+  transform: rotate(-10deg);
+  font-size: 2vw;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name-set {
+  width: 75vw;
+  display: flex;
+  align-items: center;
+}
+
+.name-set input {
+  margin-left: 2vw;
+  padding: 3vh 0;
+  width: 34vw;
+  height: 6vh;
+  outline: none;
+  border: none;
+  border-bottom: 1vh solid black;
+  font-size: 5vw;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+
+.username-set {
+  margin-bottom: 5vw;
+}
+
+.friendname-set {
+  margin-bottom: 7vw;
+}
+
+.wavy {
+  width: 100vw;
+  height: 20vw;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 4vw;
+}
+
+.star {
+  object-fit: contain;
+  width: 9%;
+  height: auto;
+  position: relative;
+}
+
+.star-1 {
+  bottom: 2vw;
+}
+
+.star-2 {
+  top: 9vw;
+}
+
+.wavy p {
+  margin: 0 6vw;
+}
+
+.greeting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vw;
+  max-width: 80vw;
+  font-size: 6vw;
+}
+
+.greeting-name {
+  font-size: 5vw;
+}
