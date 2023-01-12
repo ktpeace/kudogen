@@ -15,12 +15,12 @@ const Home = () => {
           </h1>
           <h2>generate a unique compliment image for your friends </h2>
           <img src={pointer} alt="arrow" className="pointer" />
-          <span className="whomever">(or whomever!)</span>
+          <span className="whomever handwriting">(or whomever!)</span>
         </div>
         <div className="triangle"></div>
       </header>
       <main>
-        <p class="get-started">Let's get started!</p>
+        <p class="get-started handwriting">Let's get started!</p>
         <form>
           <div className="name-set username-set">
             <label htmlFor="username">My name:</label>
@@ -39,7 +39,7 @@ const Home = () => {
             <img src={star} alt="star" className="star star-1" />
             <div className="greeting">
               <p className="greeting-hi">Hi,</p>
-              <p className="greeting-name">WWWWWWWWWWWWWWWWWWWW!</p>
+              <p className="greeting-name">Nathaniel!</p>
               {/* WWWWWWWWWWWWWWWWWWWWWWWWW */}
             </div>
             <img src={star} alt="star" className="star star-2" />
@@ -110,7 +110,7 @@ const Home = () => {
             <div class="color-splotch"></div>
             <div class="color-splotch"></div>
           </div>
-          <p>Gimme a new set</p>
+          <p className="handwriting">Gimme a new set</p>
           <label htmlFor="description">
             The following text will appear in your result, so edit it however
             you like:
@@ -178,8 +178,10 @@ const Home = () => {
           <h4>Activity</h4>
           <h4>Food</h4>
           <h4>Object</h4>
-          <p>That's it! Are you ready to do this??</p>
-          <button type="submit">Compliment My Friend</button>
+          <p className="handwriting">That's it! Are you ready to do this??</p>
+          <button type="submit" className="submit">
+            Compliment My Friend
+          </button>
         </form>
       </main>
     </div>

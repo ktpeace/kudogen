@@ -8,7 +8,7 @@
   src: URL("../vger-bold.ttf") format("truetype");
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /************* #RESET & NORMALIZE *************/
 @import-normalize;
@@ -145,6 +145,10 @@ body {
   font-weight: 800;
 }
 
+.handwriting {
+  font-family: "Gloria Hallelujah", cursive;
+}
+
 /************* #HEADER *************/
 header {
   height: 100vh;
@@ -210,7 +214,7 @@ h2 {
   top: 33.5vw;
   left: 51vw;
   transform: rotate(29deg);
-  font-size: 1vw;
+  font-size: 1.5vw;
 }
 
 .triangle {
@@ -306,4 +310,10 @@ form {
 
 .greeting-name {
   font-size: 5vw;
+}
+
+/* Bottom */
+.submit {
+  font-family: "Rubik", sans-serif;
+  text-transform: uppercase;
 }
