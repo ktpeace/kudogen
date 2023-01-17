@@ -139,10 +139,14 @@ table {
 }
 
 /************* #UNIVERSAL *************/
+* {
+  max-width: 100vw;
+}
 body {
   font-size: 5vw;
   font-family: "Rubik", sans-serif;
   font-weight: 800;
+  overflow-x: hidden;
 }
 
 .handwriting {
@@ -157,12 +161,13 @@ header {
 }
 
 .circle {
+  position: absolute;
   background-color: #8a9099;
   border-radius: 50%;
+  margin: 0;
 }
 
 .circle-1 {
-  position: absolute;
   top: -9vw;
   left: -2.6vw;
   height: 24vw;
@@ -170,7 +175,6 @@ header {
 }
 
 .circle-2 {
-  position: absolute;
   top: -3vw;
   right: -12vw;
   height: 46vw;
@@ -242,6 +246,12 @@ form {
   align-items: center;
 }
 
+.header-text {
+  margin: 0 10vw;
+  line-height: 1.4;
+  text-align: center;
+}
+
 .name-set {
   width: 75vw;
   display: flex;
@@ -269,15 +279,29 @@ form {
   margin-bottom: 7vw;
 }
 
+/* GREETING SECTION */
+
 .wavy {
   width: 100vw;
-  height: 20vw;
+  height: 33vw;
+  margin-bottom: 7vh;
   background-color: black;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-bottom: 4vw;
+  /* source for below: https://css-generators.com/wavy-shapes */
+  --mask: radial-gradient(154.29px at 50% 207px, #000 99%, #0000 101%)
+      calc(50% - 138px) 0/276px 51% repeat-x,
+    radial-gradient(154.29px at 50% -138px, #0000 99%, #000 101%) 50% 69px/276px
+      calc(51% - 69px) repeat-x,
+    radial-gradient(154.29px at 50% calc(100% - 207px), #000 99%, #0000 101%)
+      calc(50% - 138px) 100%/276px 51% repeat-x,
+    radial-gradient(154.29px at 50% calc(100% + 138px), #0000 99%, #000 101%)
+      50% calc(100% - 69px) / 276px calc(51% - 69px) repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
 }
 
 .star {
@@ -312,8 +336,243 @@ form {
   font-size: 5vw;
 }
 
-/* Bottom */
-.submit {
+/* ADJECTIVE SECTION */
+
+.adj-header {
+  margin-bottom: 9vh;
+}
+
+.buttons {
+  margin: 0 10vw;
+  margin-bottom: 3vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3vw;
+}
+
+button {
+  padding: 5px 10px;
+  border-radius: 25px;
   font-family: "Rubik", sans-serif;
+  font-size: 30px;
+  background-color: #000;
+  color: #fff;
+}
+
+button:hover {
+  border: 2px solid #8a9099;
+  background-color: #8a9099;
+  cursor: pointer;
+}
+
+.swell-container {
+  padding: 2rem;
+  position: relative;
+  top: 10vh;
+  /* bottom: 20vh;
+  left: 9vw; */
+  transform: rotate(-25deg);
+  border-radius: 5px;
+  background-color: #8a9099;
+  color: #fff;
+}
+
+/* COLORS SECTION */
+.colors-section {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30vh;
+  padding-bottom: 15vh;
+  background-color: #000;
+  color: #fff;
+}
+
+.color-splashes {
+  margin: 0 10vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.color-splash {
+  height: 15vw;
+  width: 15vw;
+}
+
+path:hover {
+  stroke: #fff;
+  stroke-width: 7px;
+}
+
+.color-splash:hover {
+  cursor: pointer;
+}
+
+.gimme {
+  align-self: flex-end;
+  margin-top: 3vh;
+  margin-right: 15vw;
+  font-size: 2vw;
+}
+
+.gimme:hover {
+  cursor: pointer;
+  color: #00f7ff;
+}
+
+.description-container {
+  padding: 20vh 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6vh;
+  line-height: 1.4;
+  background-color: #8a9099;
+  color: #fff;
+}
+
+#description {
+  margin: 0 12vw;
+  padding: 3vh;
+  border: none;
+  border-radius: 8px;
+  font-size: 2vw;
+  font-family: "Rubik", sans-serif;
+}
+
+.feelings-container {
+  padding: 20vh 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9vh;
+  background-color: #000;
+  color: white;
+}
+
+.feelings-button {
+  background-color: #fff;
+  color: #000;
+  /* border: 2px solid white; */
+}
+
+.emoji-line {
+  position: relative;
+  bottom: 5vh;
+}
+
+.emoji-header {
+  padding-top: 12vh;
+  margin-bottom: 10vh;
+}
+
+.emoji-categories {
+  display: flex;
+  gap: 7vw;
   text-transform: uppercase;
+  font-size: 3vw;
+}
+
+.emoji-col-container {
+  display: flex;
+  flex-direction: column;
+  gap: 7vh;
+}
+
+.emoji-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+}
+
+.emoji-div {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 4px solid #fff;
+  border-radius: 50%;
+}
+
+.emoji-div:hover {
+  background-color: #b9f0f1;
+  border: 4px solid #00f7ff;
+  cursor: pointer;
+}
+
+.wavy-bottom {
+  margin-bottom: -50vh;
+  position: relative;
+  z-index: -1;
+}
+
+.submit-container {
+  width: 100vw;
+  padding-top: 20vh;
+  padding-bottom: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9vh;
+  background-color: #000;
+  color: white;
+}
+
+.submit-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  bottom: 20px;
+  left: -290px;
+  transform: rotate(-20deg);
+  font-size: 3vw;
+  line-height: 1.6;
+}
+
+.submit-button {
+  padding: 2vw 0;
+  width: 55vw;
+  border: 3px solid #000;
+  border-radius: 50px;
+  font-family: "V-Ger Grotesque", sans-serif;
+  font-size: 3vw;
+  font-weight: 800;
+  letter-spacing: 0.7rem;
+  text-transform: uppercase;
+  background-color: #00f7ff;
+  color: #000;
+}
+
+.submit-button:hover {
+  border: 3px solid #00f7ff;
+  background-color: #000;
+  color: #00f7ff;
+}
+
+footer {
+  padding-top: 2vh;
+  padding-bottom: 5vh;
+  background-color: #8a9099;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+a {
+  font-size: 2vw;
+  text-decoration: none;
+  color: #45474b;
+  text-transform: uppercase;
+}
+
+a:hover {
+  color: #000;
 }
