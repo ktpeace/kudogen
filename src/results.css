@@ -1,0 +1,15 @@
+.results-page {
+  max-height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: black;
+  color: #fff;
+}
+
+.results-page main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
