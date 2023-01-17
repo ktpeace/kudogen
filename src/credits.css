@@ -1,0 +1,40 @@
+.credits-page {
+  max-height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: black;
+  color: #fff;
+}
+
+.credits-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5vh 0;
+}
+
+.credits-header h1 {
+  color: #fff;
+}
+
+.credits-page main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vh;
+}
+
+.credits-page h2 {
+  font-size: 3.5vw;
+  color: rgb(240, 240, 240);
+}
+
+.credits-page p {
+  font-size: 5vh;
+}
+
+.flex-jerryrig {
+  height: 10vh;
+}

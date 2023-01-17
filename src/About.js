@@ -1,9 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./about.css";
 
-const Results = () => {
+const About = () => {
   return (
-    <div className="results-page">
+    <div className="about-page">
+      <header className="about-header">
+        <Link to="/" className="go-home go-homes">
+          🏠
+        </Link>
+        <h1>About</h1>
+        <div className="flex-jerryrig-home go-homes">🏠</div>
+      </header>
       <main></main>
       <footer className="credits-footer">
         <ul className="footer-list">
@@ -22,4 +30,4 @@ const Results = () => {
   );
 };
 
-export default Results;
+export default About;

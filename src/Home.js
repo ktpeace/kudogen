@@ -2,13 +2,18 @@
 // turn button gen into function that works for both
 // change divs to sections
 
-import React from "react";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./Home.css";
 import pointer from "./assets/pointer.png";
 import star from "./assets/star.png";
 
 const Home = () => {
-  function handleSubmit() {}
+  const navigate = useNavigate();
+
+  function handleSubmit() {
+    return navigate("/results");
+  }
 
   const adjectives = [
     "giving",
@@ -32,7 +37,12 @@ const Home = () => {
 
   const adjectiveButtonGenerator = adjectives.map((word) => {
     return (
-      <button value={word} name="adjective" type="button">
+      <button
+        value={word}
+        name="adjective"
+        type="button"
+        className="adjective-button home-button"
+      >
         {word}
       </button>
     );
@@ -58,7 +68,7 @@ const Home = () => {
         value={word}
         name="feeling"
         type="button"
-        className="feelings-button"
+        className="feelings-button home-button"
       >
         {word}
       </button>
@@ -113,7 +123,7 @@ const Home = () => {
 
   return (
     <div>
-      <header>
+      <header className="home-header">
         <div className="circle circle-1"></div>
         <div className="circle circle-2"></div>
         <div>
@@ -126,7 +136,7 @@ const Home = () => {
         </div>
         <div className="triangle"></div>
       </header>
-      <main>
+      <main className="home-main">
         <p class="get-started handwriting">Let's get started!</p>
         <form>
           <div className="name-set username-set">
@@ -236,10 +246,10 @@ const Home = () => {
       <footer>
         <ul className="footer-list">
           <li>
-            <a href="/">About</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <a href="/">Attributions</a>
+            <Link to="/credits">Credits</Link>
           </li>
           <li>
             <a href="https://github.com/ktpeace">©️ 2023 KAT PEACE</a>

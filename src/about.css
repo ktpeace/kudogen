@@ -1,0 +1,32 @@
+/* SHARED ON OTHER PAGES - MOVE TO ANOTHER FILE */
+.go-homes {
+  font-size: 3vw;
+}
+
+.go-home {
+  padding-left: 3vw;
+  text-decoration: none;
+}
+
+.flex-jerryrig-home {
+  visibility: hidden;
+  padding-right: 3vw;
+}
+/* END SHARED */
+
+.about-page {
+  max-height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: black;
+  color: #fff;
+}
+
+.about-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5vh 0;
+}

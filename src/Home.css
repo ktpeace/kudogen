@@ -139,9 +139,6 @@ table {
 }
 
 /************* #UNIVERSAL *************/
-* {
-  max-width: 100vw;
-}
 body {
   font-size: 5vw;
   font-family: "Rubik", sans-serif;
@@ -154,7 +151,7 @@ body {
 }
 
 /************* #HEADER *************/
-header {
+.home-header {
   height: 100vh;
   background-color: black;
   color: white;
@@ -185,21 +182,21 @@ header {
   color: #00f7ff;
 }
 
-h1,
-h2 {
+.home-header h1,
+.home-header h2 {
   position: relative;
   left: 14vw;
   text-transform: uppercase;
 }
 
-h1 {
+.home-header h1 {
   padding-top: 2vw;
   font-size: 9vw;
   font-family: "V-Ger Grotesque", sans-serif;
   letter-spacing: 1rem;
 }
 
-h2 {
+.home-header h2 {
   max-width: 42vw;
   font-size: 5vw;
   line-height: 1.3;
@@ -228,7 +225,7 @@ h2 {
 }
 
 /************* #MAIN *************/
-main {
+.home-main {
   padding-top: 20vw;
 }
 
@@ -240,7 +237,7 @@ main {
   font-size: 2vw;
 }
 
-form {
+.home-main form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -350,7 +347,7 @@ form {
   gap: 3vw;
 }
 
-button {
+.home-button {
   padding: 5px 10px;
   border-radius: 25px;
   font-family: "Rubik", sans-serif;
@@ -399,7 +396,7 @@ button:hover {
   width: 15vw;
 }
 
-path:hover {
+.home-main path:hover {
   stroke: #fff;
   stroke-width: 7px;
 }
@@ -566,13 +563,15 @@ footer {
   align-items: flex-start;
 }
 
-a {
+footer a,
+footer Link {
   font-size: 2vw;
   text-decoration: none;
   color: #45474b;
   text-transform: uppercase;
 }
 
-a:hover {
+footer a:hover,
+footer Link:hover {
   color: #000;
 }
