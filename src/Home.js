@@ -8,14 +8,133 @@ import "./Home.css";
 import pointer from "./assets/pointer.png";
 import star from "./assets/star.png";
 
-const Home = () => {
+const Home = ({ formEntries, setFormEntries }) => {
+  const adjectiveMax = 6;
+  const feelingsMax = 6;
+  const emojiMax = 8;
   const navigate = useNavigate();
+  const { name, friendName, adjectives, color, description, feelings, emojis } =
+    formEntries;
+  const colors1 = [
+    "FF0066",
+    "F1C21B",
+    "BAE6FF",
+    "08BDBA",
+    "B8CD4E",
+    "FFD6E8",
+    "942323",
+    "8C52FF",
+    "BF87C8",
+    "E9A65E",
+  ];
+  const colors2 = [
+    "fcba03",
+    "168c73",
+    "BAE6FF",
+    "08BDBA",
+    "B8CD4E",
+    "FFD6E8",
+    "942323",
+    "8C52FF",
+    "BF87C8",
+    "E9A65E",
+  ];
+  const [colorOptions, setColorOptions] = useState(colors1);
+
+  function handleNameChange(e) {
+    setFormEntries({
+      ...formEntries,
+      name: e.target.value,
+    });
+  }
+
+  function handleFriendNameChange(e) {
+    setFormEntries({
+      ...formEntries,
+      friendName: e.target.value,
+    });
+  }
+
+  function handleAdjectiveButtonClick(e) {
+    const adj = e.target.value;
+    if (adjectives.includes(adj)) {
+      setFormEntries((prev) => {
+        const adjectives = prev.adjectives.filter((el) => el !== adj);
+        return { ...formEntries, adjectives };
+      });
+    } else {
+      adjectives.length < adjectiveMax &&
+        setFormEntries({
+          ...formEntries,
+          adjectives: [...formEntries.adjectives, adj],
+        });
+    }
+  }
+
+  function handleColorClick(e) {
+    const thisColor = e.target.attributes.getNamedItem("fill").value;
+    setFormEntries({
+      ...formEntries,
+      color: thisColor,
+    });
+    console.log(color === thisColor);
+    console.log(color);
+  }
+
+  function handleGimmeClick(e) {
+    setFormEntries({ ...formEntries, color: null });
+    if (colorOptions[0] === colors1[0]) {
+      setColorOptions(colors2);
+    } else {
+      setColorOptions(colors1);
+    }
+  }
+
+  function handleDescriptionChange(e) {
+    setFormEntries({
+      ...formEntries,
+      description: e.target.value,
+    });
+    console.log(description);
+  }
+
+  function handleFeelingClick(e) {
+    const feeling = e.target.value;
+    if (feelings.includes(feeling)) {
+      setFormEntries((prev) => {
+        const feelings = prev.feelings.filter((el) => el !== feeling);
+        return { ...formEntries, feelings };
+      });
+    } else {
+      feelings.length < feelingsMax &&
+        setFormEntries({
+          ...formEntries,
+          feelings: [...formEntries.feelings, feeling],
+        });
+    }
+  }
+
+  function handleEmojiClick(e) {
+    const emoji = e.target.attributes.getNamedItem("value").value;
+    if (emojis.includes(emoji)) {
+      setFormEntries((prev) => {
+        const emojis = prev.emojis.filter((el) => el !== emoji);
+        return { ...formEntries, emojis };
+      });
+    } else {
+      emojis.length < emojiMax &&
+        setFormEntries({
+          ...formEntries,
+          emojis: [...formEntries.emojis, emoji],
+        });
+    }
+  }
 
   function handleSubmit() {
     return navigate("/results");
   }
 
-  const adjectives = [
+  const adjectiveList = [
     "giving",
     "friendly",
     "wise",
@@ -35,20 +154,24 @@ const Home = () => {
     "moral",
   ];
 
-  const adjectiveButtonGenerator = adjectives.map((word) => {
+  const adjectiveButtonGenerator = adjectiveList.map((word) => {
     return (
       <button
+        key={word}
         value={word}
         name="adjective"
         type="button"
-        className="adjective-button home-button"
+        className={`adjective-button home-button ${
+          adjectives.includes(word) ? "home-button-selected" : ""
+        }`}
+        onClick={handleAdjectiveButtonClick}
       >
         {word}
       </button>
     );
   });
 
-  const feelings = [
+  const feelingList = [
     "happy",
     "hopeful",
     "free",
@@ -62,60 +185,61 @@ const Home = () => {
     "secure",
   ];
 
-  const feelingButtonGenerator = feelings.map((word) => {
+  const feelingButtonGenerator = feelingList.map((word) => {
     return (
       <button
+        key={word}
         value={word}
         name="feeling"
         type="button"
-        className="feelings-button home-button"
+        className={`feelings-button home-button ${
+          feelings.includes(word) ? "feelings-button-selected" : ""
+        }`}
+        onClick={handleFeelingClick}
       >
         {word}
       </button>
     );
   });
 
-  const colors = [
-    "FF0066",
-    "F1C21B",
-    "BAE6FF",
-    "08BDBA",
-    "B8CD4E",
-    "FFD6E8",
-    "942323",
-    "8C52FF",
-    "BF87C8",
-    "E9A65E",
-  ];
-
   // svg code from https://www.blobmaker.app/
-  const splashGenerator = colors.map((color) => {
+  const splashGenerator = colorOptions.map((thisColor) => {
     return (
       <svg
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
         className="color-splash"
+        key={thisColor}
       >
         <path
-          fill={`#${color}`}
+          fill={`#${thisColor}`}
           d="M17.9,-27.6C26.8,-22.2,39.8,-23.2,46.6,-18.4C53.3,-13.5,53.7,-2.9,51.3,6.7C48.9,16.3,43.7,24.9,38.2,35.5C32.7,46.2,26.9,59,18.9,59C10.8,58.9,0.5,46.1,-14.7,44.2C-29.9,42.4,-50.1,51.7,-64.5,48.5C-78.9,45.2,-87.5,29.5,-86.3,14.6C-85.1,-0.4,-74.1,-14.6,-62,-23.1C-50,-31.5,-36.8,-34.2,-26.3,-38.8C-15.8,-43.4,-7.9,-49.8,-1.7,-47.2C4.6,-44.6,9.1,-33,17.9,-27.6Z"
           transform="translate(100 100)"
+          className={`${color === `#${thisColor}` ? "color-selected" : ""}`}
+          onClick={handleColorClick}
         />
       </svg>
     );
   });
 
-  const emojis = ["🧳", "🌂", "☂️", "🧵", "🪡", "🪢", "🧶", "👓", "🕶"];
+  const emojiList = ["🧳", "🌂", "☂️", "🧵", "🪡", "🪢", "🧶", "👓", "🕶"];
 
   // 🧳 🌂 ☂️ 🧵 🪡 🪢 🧶 👓 🕶 🥽 🥼 🦺 👔 👕 👖 🧣 🧤 🧥 🧦 👗 👘
   // 🥻 🩴 🩱 🩲 🩳 👙 👚 👛 👜 👝 🎒 👞 👟 🥾 🥿 👠 👡 🩰 👢 👑 👒
   // 🎩 🎓 🧢 ⛑ 🪖 💄 💍 💼
 
-  const EmojiGenerator = ({ emojis }) => {
-    return emojis.map((emoji) => {
+  const EmojiGenerator = ({ emojiList }) => {
+    return emojiList.map((emoji) => {
       return (
-        <div className="emoji-div">
-          <span className={`emoji ${emoji}`}>{emoji}</span>
+        <div
+          className={`emoji-div ${
+            emojis.includes(emoji) ? "emoji-selected" : ""
+          }`}
+          key={emoji}
+        >
+          <span className="emoji" value={emoji} onClick={handleEmojiClick}>
+            {emoji}
+          </span>
         </div>
       );
     });
@@ -123,6 +247,7 @@ const Home = () => {
 
   return (
     <div>
+      {/* HEADER */}
       <header className="home-header">
         <div className="circle circle-1"></div>
         <div className="circle circle-2"></div>
@@ -136,12 +261,20 @@ const Home = () => {
         </div>
         <div className="triangle"></div>
       </header>
+      {/* GET STARTED */}
       <main className="home-main">
-        <p class="get-started handwriting">Let's get started!</p>
+        <p className="get-started handwriting">Let's get started!</p>
         <form>
           <div className="name-set username-set">
             <label htmlFor="username">My name:</label>
-            <input type="text" id="username" name="username" maxLength={20} />
+            <input
+              type="text"
+              id="username"
+              name="username"
+              maxLength={20}
+              value={name}
+              onChange={handleNameChange}
+            />
           </div>
           <div className="name-set friendname-set">
             <label htmlFor="friendname">Friend's name:</label>
@@ -150,30 +283,41 @@ const Home = () => {
               id="friendname"
               name="friendname"
               maxLength={20}
+              value={friendName}
+              onChange={handleFriendNameChange}
             />
           </div>
+          {/* GREETING */}
           <div className="wavy">
             <img src={star} alt="star" className="star star-1" />
             <div className="greeting">
               <p className="greeting-hi">Hi,</p>
-              <p className="greeting-name">you!</p>
+              <p className="greeting-name">{name ? name : "you"}!</p>
             </div>
             <img src={star} alt="star" className="star star-2" />
           </div>
+          {/* ADJECTIVES */}
           <h3 className="adj-header header-text">
-            Now, pick some adjectives to describe your friend:
+            Now, pick {adjectiveMax} adjectives to describe{" "}
+            {friendName ? friendName : "your friend"}:
           </h3>
-          <div class="buttons">{adjectiveButtonGenerator}</div>
+          <div className="buttons">{adjectiveButtonGenerator}</div>
           <div className="swell-container">
             <p className="swell">Swell!</p>
           </div>
+          {/* COLORS */}
           <section className="colors-section">
             <h3 className="header-text">
               Hmm...which of these colors feels right?
             </h3>
             <div className="color-splashes">{splashGenerator}</div>
-            <p className="handwriting gimme">Gimme a new set</p>
+            <p className="handwriting gimme" onClick={handleGimmeClick}>
+              {colors1[0] === colorOptions[0]
+                ? "Gimme a new set"
+                : "Previous set"}
+            </p>
           </section>
+          {/* DESCRIPTION */}
           <section className="description-container">
             <div className="header-text description-header">
               <label htmlFor="description">
@@ -188,45 +332,52 @@ const Home = () => {
               id="description"
               placeholder="I'm so proud to have you as a friend!"
               maxLength={60}
+              onChange={handleDescriptionChange}
             ></textarea>
           </section>
+          {/* FEELINGS */}
           <section className="feelings-container">
             <h3 className="header-text">
-              How does your friend make you <em>feel</em>?
+              How does {friendName ? friendName : "your friend"} make you{" "}
+              <em>feel</em>? Pick {feelingsMax}:
             </h3>
-            <div class="buttons feelings-buttons">{feelingButtonGenerator}</div>
+            <div className="buttons feelings-buttons">
+              {feelingButtonGenerator}
+            </div>
           </section>
+          {/* EMOJI */}
           <div className="emoji-line">😁🤩🤔🤪🥸🤓🤠🤧</div>
           <h3 className="header-text emoji-header">
-            Emoji time! Which of these do you associate with Nathaniel? Pick
-            eight (8):
+            Emoji time! Which of these do you most associate with{" "}
+            {friendName ? friendName : "your friend"}? Pick {emojiMax}:
           </h3>
           <div className="emoji-categories">
             <div className="emoji-col-container">
               <h4>Element</h4>
               <div className="emoji-col">
-                <EmojiGenerator emojis={emojis} />
+                <EmojiGenerator emojiList={emojiList} />
               </div>
             </div>
             <div className="emoji-col-container">
               <h4>Activity</h4>
               <div className="emoji-col">
-                <EmojiGenerator emojis={emojis} />
+                <EmojiGenerator emojiList={emojiList} />
               </div>
             </div>
             <div className="emoji-col-container">
               <h4>Food</h4>
               <div className="emoji-col">
-                <EmojiGenerator emojis={emojis} />
+                <EmojiGenerator emojiList={emojiList} />
               </div>
             </div>
             <div className="emoji-col-container">
               <h4>Object</h4>
               <div className="emoji-col">
-                <EmojiGenerator emojis={emojis} />
+                <EmojiGenerator emojiList={emojiList} />
               </div>
             </div>
           </div>
+          {/* SUBMIT */}
           <div className="wavy wavy-bottom"></div>
           <section className="submit-container">
             <h3 className="handwriting submit-header">
@@ -238,11 +389,13 @@ const Home = () => {
               className="submit-button"
               onClick={handleSubmit}
             >
-              Compliment My Friend
+              Compliment{" "}
+              {friendName && friendName.length < 15 ? friendName : "My Friend"}
             </button>
           </section>
         </form>
       </main>
+      {/* FOOTER */}
       <footer>
         <ul className="footer-list">
           <li>
