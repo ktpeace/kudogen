@@ -6,14 +6,21 @@ This will be a compliment generator for people you know. It's a fun combination 
 
 ## TO DO AS OF 1/17
 
+### IMMEDIATE
+
 - create results page styling
-- add logic and shared states for home + results
-- add reset button for adjs + feelings
-- fill in adjectives, feelings, colors
 - fill in images for results from freepik
 - create 'take screenshot/save image' button in results
+
+### NEXT
+
+- fill in adjectives, feelings, colors
+- add can't submit message and submit button validation
+
+### LATER
+
+- add reset button for adjs + feelings
 - make home emoji section look better
 - make more responsive
 - refactor code
-
 - change colors to not need to plug in hashtags so any color format works in arrays
