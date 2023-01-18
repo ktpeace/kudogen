@@ -4,12 +4,79 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: black;
-  color: #fff;
+  background-color: #1e262e;
+  font-family: "V-Ger Grotesque", sans-serif;
+  text-transform: uppercase;
 }
 
 .results-page main {
+  min-height: 97vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  padding: 1vw 2vw 0 2vw;
+}
+
+/* #00f7ff; */
+.neon-major {
+  color: #90fbff;
+  text-shadow: 0 0 5px #90fbff, 0 0 1px #90fbff, 0 0 5px #90fbff,
+    0 0 0px #90fbff;
+}
+
+/* color | offset-x | offset-y | blur-radius */
+.neon-minor {
+  color: #38f4fb;
+  text-shadow: 0 0 5px #197184, 0 0 1px #197184, 0 0 5px #197184,
+    0 0 0px #90fbff;
+  font-size: 2vw;
+}
+
+.results-header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+}
+
+.results-friendname {
+  font-size: 5vw;
+}
+.results-description {
+  font-size: 1.5vw;
+}
+
+.results-kudogen {
+  align-self: flex-start;
+  padding: 0.3vw 0.7vw;
+  border: 5px solid #293a44;
+  color: #293a44;
+  font-size: 2.5vw;
+}
+
+.results-four-sections {
+  display: flex;
+  justify-content: space-between;
+}
+
+.results-adj,
+.results-feeling {
+  color: #ffcfde;
+  text-shadow: 0 0 5px #e4b6c4, 0 0 1px #e4b6c4, 0 0 5px #e4b6c4,
+    0 0 0px #e4b6c4;
+}
+
+.results-type-p {
+  width: 25vw;
+  font-size: 1.5vw;
+  color: #ffcfde;
+  text-shadow: 0 0 5px #e4b6c4, 0 0 1px #e4b6c4, 0 0 5px #e4b6c4,
+    0 0 0px #e4b6c4;
+}
+
+.results-image-footer {
+  font-size: 1.3vw;
+  background-color: #163349;
+  color: #229ab4;
+  text-transform: none;
+  font-family: "Rubik", sans-serif;
 }

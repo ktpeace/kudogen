@@ -222,9 +222,59 @@ const Home = ({ formEntries, setFormEntries }) => {
     );
   });
 
-  const emojiList = ["🧳", "🌂", "☂️", "🧵", "🪡", "🪢", "🧶", "👓", "🕶"];
+  const emojiList1 = [
+    "🧳",
+    "🌂",
+    "☂️",
+    "🧵",
+    "🪡",
+    "🪢",
+    "🧶",
+    "🎩",
+    "🎓",
+    "🧢",
+  ];
 
-  // 🧳 🌂 ☂️ 🧵 🪡 🪢 🧶 👓 🕶 🥽 🥼 🦺 👔 👕 👖 🧣 🧤 🧥 🧦 👗 👘
+  const emojiList2 = [
+    "👚",
+    "👛",
+    "👜",
+    "👝",
+    "🎒",
+    "👞",
+    "👟",
+    "🥾",
+    "🥿",
+    "👠",
+  ];
+
+  const emojiList3 = [
+    "👡",
+    "🩰",
+    "👢",
+    "👑",
+    "👒",
+    "⛑",
+    "🪖",
+    "💄",
+    "💍",
+    "💼",
+  ];
+
+  const emojiList4 = [
+    "🥼",
+    "🦺",
+    "👔",
+    "👕",
+    "👘",
+    "🧣",
+    "🧤",
+    "🧥",
+    "🧦",
+    "👗",
+  ];
+
+  //  👓 🕶 🥽 🥼 🦺 👔 👕 👖 🧣 🧤 🧥 🧦 👗 👘
   // 🥻 🩴 🩱 🩲 🩳 👙 👚 👛 👜 👝 🎒 👞 👟 🥾 🥿 👠 👡 🩰 👢 👑 👒
   // 🎩 🎓 🧢 ⛑ 🪖 💄 💍 💼
 
@@ -355,25 +405,25 @@ const Home = ({ formEntries, setFormEntries }) => {
             <div className="emoji-col-container">
               <h4>Element</h4>
               <div className="emoji-col">
-                <EmojiGenerator emojiList={emojiList} />
+                <EmojiGenerator emojiList={emojiList1} />
               </div>
             </div>
             <div className="emoji-col-container">
               <h4>Activity</h4>
               <div className="emoji-col">
-                <EmojiGenerator emojiList={emojiList} />
+                <EmojiGenerator emojiList={emojiList2} />
               </div>
             </div>
             <div className="emoji-col-container">
               <h4>Food</h4>
               <div className="emoji-col">
-                <EmojiGenerator emojiList={emojiList} />
+                <EmojiGenerator emojiList={emojiList3} />
               </div>
             </div>
             <div className="emoji-col-container">
               <h4>Object</h4>
               <div className="emoji-col">
-                <EmojiGenerator emojiList={emojiList} />
+                <EmojiGenerator emojiList={emojiList4} />
               </div>
             </div>
           </div>
