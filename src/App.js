@@ -18,6 +18,12 @@ function App() {
 
   const router = createBrowserRouter([
     {
+      path: "https://github.com/ktpeace/kudogen",
+      element: (
+        <Home formEntries={formEntries} setFormEntries={setFormEntries} />
+      ),
+    },
+    {
       path: "/",
       element: (
         <Home formEntries={formEntries} setFormEntries={setFormEntries} />
