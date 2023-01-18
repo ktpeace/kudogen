@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ktpeace/kudogen/static/css/main.ec13e843.css",
-    "main.js": "/ktpeace/kudogen/static/js/main.bd0596d6.js",
+    "main.js": "/ktpeace/kudogen/static/js/main.ac649c35.js",
     "static/media/vger-bold.ttf": "/ktpeace/kudogen/static/media/vger-bold.93451ed7eb3f9d5a070e.ttf",
     "index.html": "/ktpeace/kudogen/index.html",
     "main.ec13e843.css.map": "/ktpeace/kudogen/static/css/main.ec13e843.css.map",
-    "main.bd0596d6.js.map": "/ktpeace/kudogen/static/js/main.bd0596d6.js.map"
+    "main.ac649c35.js.map": "/ktpeace/kudogen/static/js/main.ac649c35.js.map"
   },
   "entrypoints": [
     "static/css/main.ec13e843.css",
-    "static/js/main.bd0596d6.js"
+    "static/js/main.ac649c35.js"
   ]
 }
