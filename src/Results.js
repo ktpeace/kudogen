@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./results.css";
-import acorn from "./assets/nature/acorn.png";
-import cactus from "./assets/nature/cactus.png";
+// import acorn from "./assets/nature/acorn.png";
+// import cactus from "./assets/nature/cactus.png";
 import cloud from "./assets/nature/cloud.png";
-import flower from "./assets/nature/flower.png";
-import moon from "./assets/nature/moon.png";
-import mountain from "./assets/nature/mountain.png";
-import pine from "./assets/nature/pine.png";
-import sun from "./assets/nature/sun.png";
+// import flower from "./assets/nature/flower.png";
+// import moon from "./assets/nature/moon.png";
+// import mountain from "./assets/nature/mountain.png";
+// import pine from "./assets/nature/pine.png";
+// import sun from "./assets/nature/sun.png";
 
 // TODO
 // size words conditionally based on length
@@ -63,41 +63,53 @@ const Results = ({ formEntries }) => {
             </h2>
             <p className="neon-minor results-description">{description}</p>
           </div>
-          <h3 className="results-kudogen">KUDOGEN</h3>
+          <h3 className="results-kudogen">
+            <a href="/" className="results-kudogen-link" title="restart">
+              KUDOGEN
+            </a>
+          </h3>
         </div>
 
         <div className="results-four-sections results-padding">
           <div className="results-left">
             {/* ADJECTIVES */}
             <section className="results-adjectives neon-minor">
-              <h4 className="results-header-space">I THINK YOU ARE</h4>
+              <div className="results-header-space results-header-pair">
+                <h4 className="neon-minor">I THINK YOU ARE</h4>
+                <hr className="adj-hr"></hr>
+              </div>
               <div className="results-adj-container">{adjectivesMapper}</div>
             </section>
             {/* EMOJI */}
             <section className="results-emojis">
-              <h4 className="results-header-space neon-minor">
-                I ASSOCIATE YOU WITH
-              </h4>
+              <div className="results-header-space results-header-pair">
+                <hr className="emoji-hr"></hr>
+                <h4 className="neon-minor">I ASSOCIATE YOU WITH</h4>
+              </div>
               <div className="results-emoji-container">{emojisMapper}</div>
             </section>
           </div>
 
           <div className="ring"></div>
-          <img src={pine} alt={pine} className="results-img" />
+          <img src={cloud} alt={cloud} className="results-img" />
 
           <div className="results-right">
             {/* FEELINGS */}
             <section className="results-feelings neon-minor">
-              <h4 className="results-header-space">YOU MAKE ME FEEL</h4>
+              <hr className="feel-hr"></hr>
+              <h4 className="results-header-space test-2">YOU MAKE ME FEEL</h4>
               <div className="results-feel-container">{feelingsMapper}</div>
             </section>
             {/* RESULT TEXT */}
-            <section className="results-type neon-minor">
-              <h4 className="results-header-space">MY RESULT FOR YOU IS</h4>
-              <p className="results-type-p results-pink-text">
-                squid! The squid has spent many years traversing the depths,
-                acquiring quirky charm. what has it seen? what will it do next?
-                we can only wait and wonder...
+            <section className="results-type">
+              <hr className="results-type-hr"></hr>
+              <h4 className="results-header-space neon-minor">
+                MY RESULT FOR YOU IS
+              </h4>
+              <p className="results-type-p">
+                SQUID! The squid has spent many years traversing the depths,
+                acquiring quirky charm. What has it seen? What will it do next?
+                We can only wait and wonder.
               </p>
             </section>
           </div>
@@ -105,13 +117,13 @@ const Results = ({ formEntries }) => {
 
         <section className="results-image-footer">
           <p>
-            Made for you by {dummyName} at KUDOGEN. What result will your
-            friends get? Generate a compliment at http://www.sitename.com
+            Made for you by {dummyName} at KUDOGEN. Generate a compliment for
+            someone you know at https://ktpeace.github.io/kudogen/
           </p>
         </section>
       </main>
-
-      <footer className="credits-footer">
+      <section>Take a photo:</section>
+      <footer>
         <ul className="footer-list">
           <li>
             <Link to="/about">About</Link>
