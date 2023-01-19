@@ -1,14 +1,22 @@
 {
   "files": {
-    "main.css": "/kudogen/static/css/main.34693809.css",
-    "main.js": "/kudogen/static/js/main.1017a066.js",
+    "main.css": "/kudogen/static/css/main.6a3f59ab.css",
+    "main.js": "/kudogen/static/js/main.33283eac.js",
+    "static/media/cactus.png": "/kudogen/static/media/cactus.ac83cc56ada07f7fb216.png",
+    "static/media/mountain.png": "/kudogen/static/media/mountain.23314b0fc2a0fd39ebac.png",
+    "static/media/flower.png": "/kudogen/static/media/flower.80c3edd50aedbeb2c475.png",
+    "static/media/pine.png": "/kudogen/static/media/pine.4339a0e7373c8bb583b0.png",
+    "static/media/sun.png": "/kudogen/static/media/sun.e47a9b693b1cfc81a2de.png",
+    "static/media/moon.png": "/kudogen/static/media/moon.a7ab266e21f14903a697.png",
+    "static/media/acorn.png": "/kudogen/static/media/acorn.6a284219c23fce9d96e2.png",
+    "static/media/cloud.png": "/kudogen/static/media/cloud.d408ba1c325874d5ef53.png",
     "static/media/vger-bold.ttf": "/kudogen/static/media/vger-bold.93451ed7eb3f9d5a070e.ttf",
     "index.html": "/kudogen/index.html",
-    "main.34693809.css.map": "/kudogen/static/css/main.34693809.css.map",
-    "main.1017a066.js.map": "/kudogen/static/js/main.1017a066.js.map"
+    "main.6a3f59ab.css.map": "/kudogen/static/css/main.6a3f59ab.css.map",
+    "main.33283eac.js.map": "/kudogen/static/js/main.33283eac.js.map"
   },
   "entrypoints": [
-    "static/css/main.34693809.css",
-    "static/js/main.1017a066.js"
+    "static/css/main.6a3f59ab.css",
+    "static/js/main.33283eac.js"
   ]
 }
