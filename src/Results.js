@@ -122,9 +122,11 @@ const Results = ({ formEntries }) => {
           </p>
         </section>
       </main>
-      <section>Take a photo:</section>
       <footer>
         <ul className="footer-list">
+          <li>
+            <Link to="/">Home</Link>
+          </li>
           <li>
             <Link to="/about">About</Link>
           </li>
