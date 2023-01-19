@@ -1,6 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./results.css";
+import acorn from "./assets/nature/acorn.png";
+import cactus from "./assets/nature/cactus.png";
+import cloud from "./assets/nature/cloud.png";
+import flower from "./assets/nature/flower.png";
+import moon from "./assets/nature/moon.png";
+import mountain from "./assets/nature/mountain.png";
+import pine from "./assets/nature/pine.png";
+import sun from "./assets/nature/sun.png";
 
 // TODO
 // size words conditionally based on length
@@ -31,22 +39,6 @@ const Results = ({ formEntries }) => {
 
   const dummyEmojis = ["🌭", "🌿", "🎉", "👾", "👻", "🦒", "🐍", "🦑"];
 
-  // const feelingButtonGenerator = feelingList.map((word) => {
-  //   return (
-  //     <button
-  //       key={word}
-  //       value={word}
-  //       name="feeling"
-  //       type="button"
-  //       className={`feelings-button home-button ${
-  //         feelings.includes(word) ? "feelings-button-selected" : ""
-  //       }`}
-  //       onClick={handleFeelingClick}
-  //     >
-  //       {word}
-  //     </button>
-  //   );
-  // });
   const adjectivesMapper = dummyAdjectives.map((adj) => {
     return <span className="results-adj-feeling results-pink-text">{adj}</span>;
   });
@@ -78,25 +70,30 @@ const Results = ({ formEntries }) => {
           <div className="results-left">
             {/* ADJECTIVES */}
             <section className="results-adjectives neon-minor">
-              <h4>I THINK YOU ARE</h4>
+              <h4 className="results-header-space">I THINK YOU ARE</h4>
               <div className="results-adj-container">{adjectivesMapper}</div>
             </section>
             {/* EMOJI */}
             <section className="results-emojis">
-              <h4 className=" neon-minor">I ASSOCIATE YOU WITH</h4>
+              <h4 className="results-header-space neon-minor">
+                I ASSOCIATE YOU WITH
+              </h4>
               <div className="results-emoji-container">{emojisMapper}</div>
             </section>
           </div>
 
+          <div className="ring"></div>
+          <img src={pine} alt={pine} className="results-img" />
+
           <div className="results-right">
             {/* FEELINGS */}
             <section className="results-feelings neon-minor">
-              <h4>YOU MAKE ME FEEL</h4>
+              <h4 className="results-header-space">YOU MAKE ME FEEL</h4>
               <div className="results-feel-container">{feelingsMapper}</div>
             </section>
             {/* RESULT TEXT */}
             <section className="results-type neon-minor">
-              <h4>MY RESULT FOR YOU IS</h4>
+              <h4 className="results-header-space">MY RESULT FOR YOU IS</h4>
               <p className="results-type-p results-pink-text">
                 squid! The squid has spent many years traversing the depths,
                 acquiring quirky charm. what has it seen? what will it do next?
@@ -108,8 +105,8 @@ const Results = ({ formEntries }) => {
 
         <section className="results-image-footer">
           <p>
-            Made for you by {dummyName} at KUDOGEN. What animal represents your
-            friends? Generate a compliment at http://www.sitename.com
+            Made for you by {dummyName} at KUDOGEN. What result will your
+            friends get? Generate a compliment at http://www.sitename.com
           </p>
         </section>
       </main>
