@@ -90,9 +90,9 @@ export const resultDescriptions = {
       "PINEAPPLE! That spiny, tough exterior helps you face the world head-on. You're willing to take chances others won't, like combining tart sweetness with pizza. Keep rollin'!",
     adjectiveKeys: [22, 27, 28, 29, 34, 35, 36, 37],
   },
-  cremeBrulee: {
+  flan: {
     description:
-      "CRÈME BRÛLÉE! A signature dish in fine dining, your creamy sweetness and burnt bitterness are a pleasant yet elevated combo. You're a credit to those who know you.",
+      "FLAN! A fancier twist on plain ol' pudding, your creamy custard and caramel sauce are a pleasant yet elevated combo. You're a credit to those who know you.",
     adjectiveKeys: [4, 6, 15, 23, 26, 30, 31, 32],
   },
   macaron: {

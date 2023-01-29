@@ -20,7 +20,7 @@ import tamagoyaki from "./assets/nihonshoku/tamagoyaki.png";
 import avocado from "./assets/produce/avocado.png";
 import mushroom from "./assets/produce/mushroom.png";
 import pineapple from "./assets/produce/pineapple.png";
-import cremeBrulee from "./assets/sweets/creme-brulee.png";
+import flan from "./assets/sweets/flan.png";
 import macaron from "./assets/sweets/macaron.png";
 import cupcake from "./assets/sweets/cupcake.png";
 import { adjectiveList } from "./data/adjectives";
@@ -46,15 +46,15 @@ const Results = ({
   //   });
   if (!name) name = "me";
   if (!friendName) friendName = "You";
-  if (!adjectives)
-    adjectives = [
-      "CHIMERICAL",
-      "SILVER-TONGUED",
-      "SCRUMDIDDLYUMPTIOUS",
-      "INNOVATIVE",
-      "OPEN-MINDED",
-      "GOODHEARTED",
-    ];
+  if (!adjectives) {
+    adjectives = [];
+    for (let i = 0; i < 6; i++) {
+      let index = Math.floor(Math.random() * 40);
+      let index2 = Math.floor(Math.random() * 4);
+      adjectives.push(adjectiveList[index][index2]);
+    }
+  }
+
   if (!color) color = "#fedeff";
   if (!feelings)
     feelings = [
@@ -66,12 +66,6 @@ const Results = ({
       "recognized",
     ];
   if (!emojis) emojis = ["🌭", "🌿", "🎉", "👾", "👻", "🦒", "🐍", "🦑"];
-
-  // for (let i = 0; i < 6; i++) {
-  //   let index = Math.floor(Math.random() * 40);
-  //   let index2 = Math.floor(Math.random() * 4);
-  //   adjectives.push(adjectiveList[index][index2]);
-  // }
 
   const [resultName, resultDesc] = ResultSetter({ adjectives }); // ex: ["fortuneCookie", "FORTUNE COOKIE! You've got a way with words..."]
 
@@ -128,8 +122,8 @@ const Results = ({
     case "pineapple":
       image = pineapple;
       break;
-    case "cremeBrulee":
-      image = cremeBrulee;
+    case "flan":
+      image = flan;
       break;
     case "macaron":
       image = macaron;

@@ -8,7 +8,7 @@ This will be a compliment generator for people you know. It's a fun combination 
 
 ### IMMEDIATE
 
-- change tagline size shrinking and color
+- change subheader size shrinking and color
 - add can't submit message and submit button validation
 - create 'take screenshot/save image' button in results
 - fix line alignments on some versions in Results
@@ -17,7 +17,6 @@ This will be a compliment generator for people you know. It's a fun combination 
 
 - change tagline and favicon
 - make responsive
-- seems to only return flapjacks, waffle, egg, cactus, takosan, macaron, cloud, moon, or sun...very inclined to flapjacks
 - make actual .png sizes smaller & remove unneeded from project
 - fix routing on live site (can't go straight to results)
 
