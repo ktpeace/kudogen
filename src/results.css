@@ -15,7 +15,7 @@
 }
 
 .results-padding {
-  padding: 2vh 3vw 0 3vw;
+  padding: 1.7vh 3vw 0 3vw;
 }
 
 /* #00f7ff; */
@@ -42,11 +42,25 @@
 .results-friendname {
   position: relative;
   z-index: 2;
-  font-size: 6vw;
+  font-size: 5.5vw;
   margin-bottom: 0.5vw;
 }
 
+.results-friendname-long {
+  font-size: 4vw;
+}
+
 .results-description {
+  width: 28vw;
+  height: 10vh;
+  word-wrap: break-word;
+}
+
+.results-desc-short {
+  font-size: 1.7vw;
+}
+
+.results-desc-long {
   font-size: 1.5vw;
 }
 
@@ -87,10 +101,10 @@
 
 .adj-hr {
   position: absolute;
-  left: 19vw;
+  left: 18vw;
   margin-left: 20px;
   height: 3px;
-  width: 9vw;
+  width: 9.5vw;
   box-shadow: 1px 1px 5px #11dee6, inset 5px 5px 5px #31e4ea;
 }
 
@@ -108,7 +122,7 @@
   z-index: 0;
   right: 26vw;
   height: 3px;
-  width: 6vw;
+  width: 5vw;
   box-shadow: 1px 1px 5px #11dee6, inset 5px 5px 5px #31e4ea;
 }
 
@@ -121,13 +135,17 @@
   box-shadow: 1px 1px 5px #11dee6, inset 5px 5px 5px #31e4ea;
 }
 
-.results-adj-feeling:nth-child(even) {
-  font-size: 1.9rem;
-  text-align: center;
+.results-word-long {
+  font-size: 1.6rem !important;
+  color: yellow;
+  /* text-align: center; */
 }
 
 .ring {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1;
   top: 3vh;
   left: 27vw;
@@ -139,17 +157,14 @@
 }
 
 .results-img {
-  position: absolute;
-  width: 35vw;
-  left: 30vw;
-  bottom: 12vh;
+  max-width: 35vw;
+  max-height: 75vh;
 }
 
-.results-pink-text {
-  color: #ffdce7;
-  text-shadow: 0 0 4px #e4b6c4, 0 0 1px #e4b6c4, 0 0 4px #e4b6c4,
-    0 0 0px #e4b6c4;
-  font-family: "Orbitron", sans-serif;
+.color-text {
+  color: #fedeff;
+  text-shadow: 0 0 4px #fedeff, 0 0 1px #fedeff, 0 0 4px #fedeff,
+    0 0 0px #fedeff;
 }
 
 .results-feel-container {
@@ -169,11 +184,12 @@
 }
 
 .results-header-space {
-  margin-bottom: 3vh;
+  margin-bottom: 2vh;
 }
 
 .results-adj-feeling {
   font-size: 2.2rem;
+  font-family: "Orbitron", sans-serif;
 }
 
 .results-adjectives {
@@ -196,9 +212,6 @@
   font-weight: 400;
   text-transform: none;
   line-height: 1.3;
-  color: #e4cdd4;
-  text-shadow: 0 0 2px #f983ab, 0 0 2px #f983ab, 0 0 2px #f983ab,
-    0 0 0px #f983ab;
 }
 
 .results-image-footer {

@@ -1,67 +1,206 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import html2canvas from "html2canvas";
+import ResultSetter from "./ResultSetter";
 import "./results.css";
-// import acorn from "./assets/nature/acorn.png";
-// import cactus from "./assets/nature/cactus.png";
+import flapjacks from "./assets/breakfast/flapjacks.png";
+import egg from "./assets/breakfast/egg.png";
+import waffle from "./assets/breakfast/waffle.png";
+import tea from "./assets/breakfast/tea.png";
+import fries from "./assets/junkfood/fries.png";
+import cactus from "./assets/nature/cactus.png";
 import cloud from "./assets/nature/cloud.png";
-// import flower from "./assets/nature/flower.png";
-// import moon from "./assets/nature/moon.png";
-// import mountain from "./assets/nature/mountain.png";
-// import pine from "./assets/nature/pine.png";
-// import sun from "./assets/nature/sun.png";
+import moon from "./assets/nature/moon.png";
+import sun from "./assets/nature/sun.png";
+import fortuneCookie from "./assets/nihonshoku/fortune-cookie.png";
+import onigiri from "./assets/nihonshoku/onigiri.png";
+import ramen from "./assets/nihonshoku/ramen.png";
+import takoSan from "./assets/nihonshoku/tako-san.png";
+import tamagoyaki from "./assets/nihonshoku/tamagoyaki.png";
+import avocado from "./assets/produce/avocado.png";
+import mushroom from "./assets/produce/mushroom.png";
+import pineapple from "./assets/produce/pineapple.png";
+import cremeBrulee from "./assets/sweets/creme-brulee.png";
+import macaron from "./assets/sweets/macaron.png";
+import cupcake from "./assets/sweets/cupcake.png";
 
 // TODO
-// size words conditionally based on length
+// make all image sizes work
+// take screenshot option
 
-const Results = ({ formEntries }) => {
-  const { name, friendName, adjectives, color, description, feelings, emojis } =
-    formEntries;
+const Results = ({
+  formEntries: {
+    name,
+    friendName,
+    adjectives,
+    color,
+    description,
+    feelings,
+    emojis,
+  },
+}) => {
+  // const screenshot = html2canvas(document.querySelector("#results-main"));
+  // html2canvas(document.querySelector("#capture")).then((canvas) => {
+  //     document.body.appendChild(canvas);
+  //   });
+  if (!name) name = "WWWWWWWWWWWWWWWWWWWW";
+  if (!friendName) friendName = "alihababa";
+  if (!adjectives)
+    adjectives = [
+      "CHIMERICAL",
+      "SILVER-TONGUED",
+      "SCRUMDIDDLYUMPTIOUS",
+      "INNOVATIVE",
+      "OPEN-MINDED",
+      "GOODHEARTED",
+    ];
+  if (!color) color = "#fedeff";
+  if (!feelings)
+    feelings = [
+      "spellbound",
+      "understood",
+      "enlightened",
+      "treasured",
+      "victorious",
+      "recognized",
+    ];
+  if (!emojis) emojis = ["🌭", "🌿", "🎉", "👾", "👻", "🦒", "🐍", "🦑"];
 
-  const dummyName = "WWWWWWWWWWWWWWWWWWWW";
+  // const [resultName, resultDesc] = ResultSetter({ adjectives }); // ex: ["fortuneCookie", "FORTUNE COOKIE! You've got a way with words..."]
+  let resultName = "cupcake";
+  const resultDesc =
+    "CUPCAKE! Fluffy cake, rich icing, and a rainbow of sprinkles...could anyone be happier you're around? If only there were more of you, but people this sweet are rare.";
+  let image;
+  switch (resultName) {
+    case "flapjacks":
+      image = flapjacks;
+      break;
+    case "egg":
+      image = egg;
+      break;
+    case "waffle":
+      image = waffle;
+      break;
+    case "tea":
+      image = tea;
+      break;
+    case "fries":
+      image = fries;
+      break;
+    case "cactus":
+      image = cactus;
+      break;
+    case "cloud":
+      image = cloud;
+      break;
+    case "moon":
+      image = moon;
+      break;
+    case "sun":
+      image = sun;
+      break;
+    case "fortuneCookie":
+      image = fortuneCookie;
+      break;
+    case "onigiri":
+      image = onigiri;
+      break;
+    case "ramen":
+      image = ramen;
+      break;
+    case "takoSan":
+      image = takoSan;
+      break;
+    case "tamagoyaki":
+      image = tamagoyaki;
+      break;
+    case "avocado":
+      image = avocado;
+      break;
+    case "mushroom":
+      image = mushroom;
+      break;
+    case "pineapple":
+      image = pineapple;
+      break;
+    case "cremeBrulee":
+      image = cremeBrulee;
+      break;
+    case "macaron":
+      image = macaron;
+      break;
+    case "cupcake":
+      image = cupcake;
+      break;
+    default:
+      image = cloud;
+  }
 
-  const dummyAdjectives = [
-    "playful",
-    "responsible",
-    "regal",
-    "mature",
-    "compassionate",
-    "moral",
-  ];
-
-  const dummyFeelings = [
-    "respected",
-    "confident",
-    "capable",
-    "charmed",
-    "excited",
-    "secure",
-  ];
-
-  const dummyEmojis = ["🌭", "🌿", "🎉", "👾", "👻", "🦒", "🐍", "🦑"];
-
-  const adjectivesMapper = dummyAdjectives.map((adj) => {
-    return <span className="results-adj-feeling results-pink-text">{adj}</span>;
-  });
-
-  const feelingsMapper = dummyFeelings.map((feel) => {
+  const adjectivesMapper = adjectives.map((adj) => {
     return (
-      <span className="results-adj-feeling results-pink-text">{feel}</span>
+      <span
+        key={adj}
+        className={`results-adj-feeling ${
+          adj.length > 13 ? "results-word-long" : undefined
+        }`}
+        style={{
+          color: `${color}`,
+          textShadow: `0 0 4px ${color}, 0 0 1px ${color}, 0 0 4px ${color},
+    0 0 0px ${color}`,
+        }}
+      >
+        {adj}
+      </span>
     );
   });
 
-  const emojisMapper = dummyEmojis.map((emoji) => {
-    return <span className="results-emoji">{emoji}</span>;
+  const feelingsMapper = feelings.map((feel) => {
+    return (
+      <span
+        key={feel}
+        className={`results-adj-feeling ${
+          feel.length > 13 ? "results-word-long" : undefined
+        }`}
+        style={{
+          color: `${color}`,
+          textShadow: `0 0 4px ${color}, 0 0 1px ${color}, 0 0 4px ${color},
+    0 0 0px ${color}`,
+        }}
+      >
+        {feel}
+      </span>
+    );
+  });
+
+  const emojisMapper = emojis.map((emoji) => {
+    return (
+      <span key={emoji} className="results-emoji">
+        {emoji}
+      </span>
+    );
   });
 
   return (
     <div className="results-page">
-      <main>
+      <main id="results-main">
         <div className="results-header results-padding">
           <div>
-            <h2 className="neon-major results-friendname">
-              DOMINIQUE{friendName}
+            <h2
+              className={`neon-major results-friendname ${
+                friendName.length > 10 ? "results-friendname-long" : undefined
+              }`}
+            >
+              {friendName}
             </h2>
-            <p className="neon-minor results-description">{description}</p>
+            <p
+              className={`neon-minor results-description ${
+                description.length < 35
+                  ? "results-desc-short"
+                  : "results-desc-long"
+              }`}
+            >
+              {description}
+            </p>
           </div>
           <h3 className="results-kudogen">
             <a href="/" className="results-kudogen-link" title="restart">
@@ -90,8 +229,9 @@ const Results = ({ formEntries }) => {
             </section>
           </div>
 
-          <div className="ring"></div>
-          <img src={cloud} alt={cloud} className="results-img" />
+          <div className="ring">
+            <img src={image} alt={image} className="results-img" />
+          </div>
 
           <div className="results-right">
             {/* FEELINGS */}
@@ -106,10 +246,15 @@ const Results = ({ formEntries }) => {
               <h4 className="results-header-space neon-minor">
                 MY RESULT FOR YOU IS
               </h4>
-              <p className="results-type-p">
-                SQUID! The squid has spent many years traversing the depths,
-                acquiring quirky charm. What has it seen? What will it do next?
-                We can only wait and wonder.
+              <p
+                className="results-type-p neon-minor"
+                style={{
+                  color: `${color}`,
+                  textShadow: `0 0 2px ${color}, 0 0 2px ${color}, 0 0 2px ${color},
+    0 0 0px ${color}`,
+                }}
+              >
+                {resultDesc}
               </p>
             </section>
           </div>
@@ -117,8 +262,8 @@ const Results = ({ formEntries }) => {
 
         <section className="results-image-footer">
           <p>
-            Made for you by {dummyName} at KUDOGEN. Generate a compliment for
-            someone you know at https://ktpeace.github.io/kudogen/
+            Made for you by {name} at KUDOGEN. Generate a compliment for someone
+            you know at https://ktpeace.github.io/kudogen/
           </p>
         </section>
       </main>

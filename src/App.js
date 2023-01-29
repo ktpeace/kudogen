@@ -11,7 +11,7 @@ function App() {
     friendName: "",
     adjectives: "",
     color: "",
-    description: "Proud to have you as a friend!",
+    description: "So proud to have you as a friend!",
     feelings: "",
     emojis: "",
   });

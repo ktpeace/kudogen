@@ -7,6 +7,23 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Home.css";
 import pointer from "./assets/pointer.png";
 import star from "./assets/star.png";
+import { adjectiveList } from "./data/adjectives";
+import { feelingList1, feelingList2 } from "./data/emotions";
+
+const adjRandomizer = Object.entries(adjectiveList).map(([key, val], i) => {
+  const wordArray = adjectiveList[key];
+  const randIndex = Math.floor(Math.random() * 4);
+  const word = wordArray[randIndex];
+  return word;
+});
+
+let feelingRandomizer = [];
+for (let i = 0; i < feelingList1.length; i++) {
+  let randList = Math.floor(Math.random() * 2);
+  randList === 0
+    ? feelingRandomizer.push(feelingList1[i])
+    : feelingRandomizer.push(feelingList2[i]);
+}
 
 const Home = ({ formEntries, setFormEntries }) => {
   const adjectiveMax = 6;
@@ -16,28 +33,28 @@ const Home = ({ formEntries, setFormEntries }) => {
   const { name, friendName, adjectives, color, description, feelings, emojis } =
     formEntries;
   const colors1 = [
-    "FF0066",
-    "F1C21B",
-    "BAE6FF",
-    "08BDBA",
-    "B8CD4E",
-    "FFD6E8",
-    "942323",
-    "8C52FF",
-    "BF87C8",
-    "E9A65E",
+    "A084DC",
+    "C6EBC5",
+    "e4b6c4",
+    "61B15A",
+    "FEDEFF",
+    "F7ECDE",
+    "e38585",
+    "ffd693",
+    "B2C8DF",
+    "f1e35e",
   ];
   const colors2 = [
-    "fcba03",
-    "168c73",
-    "BAE6FF",
-    "08BDBA",
-    "B8CD4E",
-    "FFD6E8",
-    "942323",
-    "8C52FF",
-    "BF87C8",
-    "E9A65E",
+    "BBBBBB",
+    "CD5D7D",
+    "A5F1E9",
+    "FFC764",
+    "63B7AF",
+    "EFA8E4",
+    "FFF8A6",
+    "EEC1EA",
+    "6181f5",
+    "E7FBBE",
   ];
   const [colorOptions, setColorOptions] = useState(colors1);
 
@@ -134,124 +151,24 @@ const Home = ({ formEntries, setFormEntries }) => {
     return navigate("/results");
   }
 
-  const adjectiveList = [
-    "giving",
-    "friendly",
-    "wise",
-    "kind",
-    "fun",
-    "smart",
-    "creative",
-    "tough",
-    "brave",
-    "hilarious",
-    "warm",
-    "playful",
-    "responsible",
-    "regal",
-    "mature",
-    "compassionate",
-    "moral",
-    "bold",
-    "free-spirited",
-    "empathetic",
-    "gentle",
-    "spontaneous",
-    "giving",
-    "friendly",
-    "wise",
-    "kind",
-    "fun",
-    "smart",
-    "creative",
-    "tough",
-    "brave",
-    "hilarious",
-    "warm",
-    "playful",
-    "responsible",
-    "regal",
-    "mature",
-    "compassionate",
-    "moral",
-    "bold",
-    "free-spirited",
-    "empathetic",
-    "gentle",
-    "spontaneous",
-    "giving",
-    "friendly",
-    "wise",
-  ];
-
-  const adjectiveButtonGenerator = adjectiveList.map((word) => {
+  const adjectiveButtonGenerator = Object.entries(adjRandomizer).map((word) => {
     return (
       <button
-        key={word}
-        value={word}
+        key={word[0]}
+        value={word[1]}
         name="adjective"
         type="button"
         className={`adjective-button home-button ${
-          adjectives.includes(word) ? "home-button-selected" : ""
+          adjectives.includes(word[1]) ? "home-button-selected" : ""
         }`}
         onClick={handleAdjectiveButtonClick}
       >
-        {word}
+        {word[1]}
       </button>
     );
   });
 
-  const feelingList = [
-    "happy",
-    "hopeful",
-    "free",
-    "supported",
-    "loved",
-    "respected",
-    "confident",
-    "capable",
-    "charmed",
-    "excited",
-    "secure",
-    "inspired",
-    "motivated",
-    "calm",
-    "energized",
-    "happy",
-    "hopeful",
-    "free",
-    "supported",
-    "loved",
-    "respected",
-    "confident",
-    "capable",
-    "charmed",
-    "excited",
-    "secure",
-    "inspired",
-    "motivated",
-    "calm",
-    "energized",
-    "happy",
-    "hopeful",
-    "free",
-    "supported",
-    "loved",
-    "respected",
-    "confident",
-    "capable",
-    "charmed",
-    "excited",
-    "secure",
-    "inspired",
-    "motivated",
-    "calm",
-    "energized",
-    "hopeful",
-    "free",
-  ];
-
-  const feelingButtonGenerator = feelingList.map((word) => {
+  const feelingButtonGenerator = feelingRandomizer.map((word) => {
     return (
       <button
         key={word}
@@ -398,7 +315,7 @@ const Home = ({ formEntries, setFormEntries }) => {
               type="text"
               id="friendname"
               name="friendname"
-              maxLength={20}
+              maxLength={14}
               value={friendName}
               onChange={handleFriendNameChange}
             />
@@ -446,7 +363,7 @@ const Home = ({ formEntries, setFormEntries }) => {
               rows="1"
               name="description"
               id="description"
-              placeholder="I'm so proud to have you as a friend!"
+              placeholder="So proud to have you as a friend!"
               maxLength={60}
               onChange={handleDescriptionChange}
             ></textarea>
