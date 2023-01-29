@@ -29,6 +29,7 @@ export const feelingList1 = [
   "treasured",
   "victorious",
   "recognized",
+  "entertained",
 ];
 
 export const feelingList2 = [
@@ -62,4 +63,5 @@ export const feelingList2 = [
   "cherished",
   "triumphant",
   "appreciated",
+  "amused",
 ];

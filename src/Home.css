@@ -482,14 +482,22 @@ body {
 .emoji-categories {
   display: flex;
   gap: 7vw;
+  margin-bottom: 10vh;
   text-transform: uppercase;
   font-size: 3vw;
 }
 
 .emoji-col-container {
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 7vh;
+}
+
+.emoji-cols {
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
 }
 
 .emoji-col {

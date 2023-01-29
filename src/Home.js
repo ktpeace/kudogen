@@ -9,6 +9,16 @@ import pointer from "./assets/pointer.png";
 import star from "./assets/star.png";
 import { adjectiveList } from "./data/adjectives";
 import { feelingList1, feelingList2 } from "./data/emotions";
+import {
+  emojiList1a,
+  emojiList1b,
+  emojiList2a,
+  emojiList2b,
+  emojiList3a,
+  emojiList3b,
+  emojiList4a,
+  emojiList4b,
+} from "./data/emojis";
 
 const adjRandomizer = Object.entries(adjectiveList).map(([key, val], i) => {
   const wordArray = adjectiveList[key];
@@ -205,62 +215,6 @@ const Home = ({ formEntries, setFormEntries }) => {
     );
   });
 
-  const emojiList1 = [
-    "🧳",
-    "🌂",
-    "☂️",
-    "🧵",
-    "🪡",
-    "🪢",
-    "🧶",
-    "🎩",
-    "🎓",
-    "🧢",
-  ];
-
-  const emojiList2 = [
-    "👚",
-    "👛",
-    "👜",
-    "👝",
-    "🎒",
-    "👞",
-    "👟",
-    "🥾",
-    "🥿",
-    "👠",
-  ];
-
-  const emojiList3 = [
-    "👡",
-    "🩰",
-    "👢",
-    "👑",
-    "👒",
-    "⛑",
-    "🪖",
-    "💄",
-    "💍",
-    "💼",
-  ];
-
-  const emojiList4 = [
-    "🥼",
-    "🦺",
-    "👔",
-    "👕",
-    "👘",
-    "🧣",
-    "🧤",
-    "🧥",
-    "🧦",
-    "👗",
-  ];
-
-  //  👓 🕶 🥽 🥼 🦺 👔 👕 👖 🧣 🧤 🧥 🧦 👗 👘
-  // 🥻 🩴 🩱 🩲 🩳 👙 👚 👛 👜 👝 🎒 👞 👟 🥾 🥿 👠 👡 🩰 👢 👑 👒
-  // 🎩 🎓 🧢 ⛑ 🪖 💄 💍 💼
-
   const EmojiGenerator = ({ emojiList }) => {
     return emojiList.map((emoji) => {
       return (
@@ -386,27 +340,47 @@ const Home = ({ formEntries, setFormEntries }) => {
           </h3>
           <div className="emoji-categories">
             <div className="emoji-col-container">
-              <h4>Element</h4>
-              <div className="emoji-col">
-                <EmojiGenerator emojiList={emojiList1} />
+              <h4>Elements</h4>
+              <div className="emoji-cols">
+                <div className="emoji-col">
+                  <EmojiGenerator emojiList={emojiList1a} />
+                </div>
+                <div className="emoji-col">
+                  <EmojiGenerator emojiList={emojiList1b} />
+                </div>
               </div>
             </div>
             <div className="emoji-col-container">
-              <h4>Activity</h4>
-              <div className="emoji-col">
-                <EmojiGenerator emojiList={emojiList2} />
+              <h4>Animals</h4>
+              <div className="emoji-cols">
+                <div className="emoji-col">
+                  <EmojiGenerator emojiList={emojiList2a} />
+                </div>
+                <div className="emoji-col">
+                  <EmojiGenerator emojiList={emojiList2b} />
+                </div>
               </div>
             </div>
             <div className="emoji-col-container">
-              <h4>Food</h4>
-              <div className="emoji-col">
-                <EmojiGenerator emojiList={emojiList3} />
+              <h4>Activities</h4>
+              <div className="emoji-cols">
+                <div className="emoji-col">
+                  <EmojiGenerator emojiList={emojiList3a} />
+                </div>
+                <div className="emoji-col">
+                  <EmojiGenerator emojiList={emojiList3b} />
+                </div>
               </div>
             </div>
             <div className="emoji-col-container">
-              <h4>Object</h4>
-              <div className="emoji-col">
-                <EmojiGenerator emojiList={emojiList4} />
+              <h4>Interests</h4>
+              <div className="emoji-cols">
+                <div className="emoji-col">
+                  <EmojiGenerator emojiList={emojiList4a} />
+                </div>
+                <div className="emoji-col">
+                  <EmojiGenerator emojiList={emojiList4b} />
+                </div>
               </div>
             </div>
           </div>
