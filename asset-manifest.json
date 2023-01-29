@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/kudogen/static/css/main.672d8ce0.css",
-    "main.js": "/kudogen/static/js/main.ca0f5efb.js",
+    "main.js": "/kudogen/static/js/main.c12bb3ce.js",
     "static/media/cactus.png": "/kudogen/static/media/cactus.42939f0ba8bca0a7f19c.png",
     "static/media/pineapple.png": "/kudogen/static/media/pineapple.e867853e2a51bb5b4873.png",
     "static/media/avocado.png": "/kudogen/static/media/avocado.f8a6c3940ae6dfd13b68.png",
@@ -10,7 +10,7 @@
     "static/media/flapjacks.png": "/kudogen/static/media/flapjacks.d6ffecefd5b0d47e00c9.png",
     "static/media/ramen.png": "/kudogen/static/media/ramen.54046b90b976e3abb4ca.png",
     "static/media/cupcake.png": "/kudogen/static/media/cupcake.b9c96bbc85b3eafdfa8e.png",
-    "static/media/creme-brulee.png": "/kudogen/static/media/creme-brulee.3331875fa7223a1809bf.png",
+    "static/media/flan.png": "/kudogen/static/media/flan.3331875fa7223a1809bf.png",
     "static/media/tamagoyaki.png": "/kudogen/static/media/tamagoyaki.9ed3f1032dc301fe711e.png",
     "static/media/fortune-cookie.png": "/kudogen/static/media/fortune-cookie.b5148bdaa56a90d96628.png",
     "static/media/mushroom.png": "/kudogen/static/media/mushroom.535443f5eb42dc24d04e.png",
@@ -25,10 +25,10 @@
     "static/media/vger-bold.ttf": "/kudogen/static/media/vger-bold.93451ed7eb3f9d5a070e.ttf",
     "index.html": "/kudogen/index.html",
     "main.672d8ce0.css.map": "/kudogen/static/css/main.672d8ce0.css.map",
-    "main.ca0f5efb.js.map": "/kudogen/static/js/main.ca0f5efb.js.map"
+    "main.c12bb3ce.js.map": "/kudogen/static/js/main.c12bb3ce.js.map"
   },
   "entrypoints": [
     "static/css/main.672d8ce0.css",
-    "static/js/main.ca0f5efb.js"
+    "static/js/main.c12bb3ce.js"
   ]
 }
