@@ -1,15 +1,34 @@
 {
   "files": {
-    "main.css": "/kudogen/static/css/main.78c99e0f.css",
-    "main.js": "/kudogen/static/js/main.e64574b1.js",
+    "main.css": "/kudogen/static/css/main.3b1f283f.css",
+    "main.js": "/kudogen/static/js/main.0d9a233e.js",
+    "static/media/cactus.png": "/kudogen/static/media/cactus.42939f0ba8bca0a7f19c.png",
+    "static/media/pineapple.png": "/kudogen/static/media/pineapple.e867853e2a51bb5b4873.png",
+    "static/media/avocado.png": "/kudogen/static/media/avocado.f8a6c3940ae6dfd13b68.png",
+    "static/media/fries.png": "/kudogen/static/media/fries.36c6db96df497eb1cb84.png",
+    "static/media/waffle.png": "/kudogen/static/media/waffle.bf50ad42c098b1e062e4.png",
+    "static/media/flapjacks.png": "/kudogen/static/media/flapjacks.d6ffecefd5b0d47e00c9.png",
+    "static/media/ramen.png": "/kudogen/static/media/ramen.54046b90b976e3abb4ca.png",
+    "static/media/cupcake.png": "/kudogen/static/media/cupcake.b9c96bbc85b3eafdfa8e.png",
+    "static/media/creme-brulee.png": "/kudogen/static/media/creme-brulee.3331875fa7223a1809bf.png",
+    "static/media/tamagoyaki.png": "/kudogen/static/media/tamagoyaki.9ed3f1032dc301fe711e.png",
+    "static/media/fortune-cookie.png": "/kudogen/static/media/fortune-cookie.b5148bdaa56a90d96628.png",
+    "static/media/mushroom.png": "/kudogen/static/media/mushroom.535443f5eb42dc24d04e.png",
+    "static/media/macaron.png": "/kudogen/static/media/macaron.696a05bbbdf2764c6294.png",
+    "static/media/tea.png": "/kudogen/static/media/tea.e89af500c5592ef6c7f4.png",
+    "static/media/moon.png": "/kudogen/static/media/moon.13ad047d3883cc97d78b.png",
+    "static/media/tako-san.png": "/kudogen/static/media/tako-san.ffa77b0e15c3d3361315.png",
+    "static/media/egg.png": "/kudogen/static/media/egg.3546d39218e0f81e4fd0.png",
+    "static/media/sun.png": "/kudogen/static/media/sun.6839ccdf1d5320a7f599.png",
+    "static/media/onigiri.png": "/kudogen/static/media/onigiri.a901ea86c8af70795bfa.png",
     "static/media/cloud.png": "/kudogen/static/media/cloud.4b753691290679d04f06.png",
     "static/media/vger-bold.ttf": "/kudogen/static/media/vger-bold.93451ed7eb3f9d5a070e.ttf",
     "index.html": "/kudogen/index.html",
-    "main.78c99e0f.css.map": "/kudogen/static/css/main.78c99e0f.css.map",
-    "main.e64574b1.js.map": "/kudogen/static/js/main.e64574b1.js.map"
+    "main.3b1f283f.css.map": "/kudogen/static/css/main.3b1f283f.css.map",
+    "main.0d9a233e.js.map": "/kudogen/static/js/main.0d9a233e.js.map"
   },
   "entrypoints": [
-    "static/css/main.78c99e0f.css",
-    "static/js/main.e64574b1.js"
+    "static/css/main.3b1f283f.css",
+    "static/js/main.0d9a233e.js"
   ]
 }
