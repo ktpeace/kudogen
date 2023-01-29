@@ -43,8 +43,8 @@ const Results = ({
   // html2canvas(document.querySelector("#capture")).then((canvas) => {
   //     document.body.appendChild(canvas);
   //   });
-  if (!name) name = "WWWWWWWWWWWWWWWWWWWW";
-  if (!friendName) friendName = "alihababa";
+  if (!name) name = "me";
+  if (!friendName) friendName = "You";
   if (!adjectives)
     adjectives = [
       "CHIMERICAL",

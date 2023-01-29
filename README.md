@@ -8,10 +8,10 @@ This will be a compliment generator for people you know. It's a fun combination 
 
 ### IMMEDIATE
 
-- fix emoji formatting
-- fill in right emoji options
-- create 'take screenshot/save image' button in results
+- change tagline size shrinking and color
 - add can't submit message and submit button validation
+- create 'take screenshot/save image' button in results
+- fix line alignments on some versions in Results
 
 ### NEXT
 
@@ -25,3 +25,4 @@ This will be a compliment generator for people you know. It's a fun combination 
 - change colors to not need to plug in hashtags so any color format works in arrays
 - make sure results starts with scrollbar at top
 - why can't I right click open submit button
+- add more feelings

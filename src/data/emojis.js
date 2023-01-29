@@ -98,8 +98,3 @@ export const emojiList4b = [
   "🪁",
   "⚖️",
 ];
-
-export const emojiList5a = [, ,];
-
-// add entertained/amused
-// change tagline size shrinking and color

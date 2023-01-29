@@ -391,6 +391,14 @@ const Home = ({ formEntries, setFormEntries }) => {
               <span>That's it! Are you ready</span>
               <span>to do this??</span>
             </h3>
+            {/* {(adjectives.length < 6 ||
+              color.length < 1 ||
+              description.length < 1 ||
+              feelings.length < 6 ||
+              emojis.length < 8 ||
+              friendName.length < 1) && (
+              <p>Please fill in/select all requested fields/amounts!</p>
+            )} */}
             <button
               type="submit"
               className="submit-button"
