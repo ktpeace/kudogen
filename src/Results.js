@@ -66,10 +66,8 @@ const Results = ({
     ];
   if (!emojis) emojis = ["🌭", "🌿", "🎉", "👾", "👻", "🦒", "🐍", "🦑"];
 
-  // const [resultName, resultDesc] = ResultSetter({ adjectives }); // ex: ["fortuneCookie", "FORTUNE COOKIE! You've got a way with words..."]
-  let resultName = "cupcake";
-  const resultDesc =
-    "CUPCAKE! Fluffy cake, rich icing, and a rainbow of sprinkles...could anyone be happier you're around? If only there were more of you, but people this sweet are rare.";
+  const [resultName, resultDesc] = ResultSetter({ adjectives }); // ex: ["fortuneCookie", "FORTUNE COOKIE! You've got a way with words..."]
+
   let image;
   switch (resultName) {
     case "flapjacks":
