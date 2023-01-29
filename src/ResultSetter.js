@@ -26,19 +26,32 @@ const ResultSetter = ({ adjectives }) => {
     });
   }
 
-  // find which candidate has the max points (OK to choose first one if a tie)
-  let max = 0;
-  let maxKey = "";
-  let maxKeyDescription = "";
+  // find which candidate has the max points
+  let max = [0];
+  let maxKey = [""];
+  let maxKeyDescription = [""];
+
   for (let key in candidates) {
-    if (candidates[key] > max) {
-      max = candidates[key];
-      maxKey = key;
-      maxKeyDescription = resultDescriptions[key].description;
+    if (candidates[key] > max[0]) {
+      max = [candidates[key]];
+      maxKey = [key];
+      maxKeyDescription = [resultDescriptions[key].description];
+    } else if (candidates[key] === max[0]) {
+      max.push(candidates[key]);
+      maxKey.push(key);
+      maxKeyDescription.push(resultDescriptions[key].description);
     }
   }
 
-  return [maxKey, maxKeyDescription];
+  // if there is a tie, select randomly
+  if (max.length > 1) {
+    let index = Math.floor(Math.random() * max.length);
+    console.log(max.length, "index: ", index);
+    maxKey[0] = maxKey[index];
+    maxKeyDescription[0] = maxKeyDescription[index];
+  }
+
+  return [maxKey[0], maxKeyDescription[0]];
 };
 
 export default ResultSetter;

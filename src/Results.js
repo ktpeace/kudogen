@@ -23,6 +23,7 @@ import pineapple from "./assets/produce/pineapple.png";
 import cremeBrulee from "./assets/sweets/creme-brulee.png";
 import macaron from "./assets/sweets/macaron.png";
 import cupcake from "./assets/sweets/cupcake.png";
+import { adjectiveList } from "./data/adjectives";
 
 // TODO
 // make all image sizes work
@@ -65,6 +66,12 @@ const Results = ({
       "recognized",
     ];
   if (!emojis) emojis = ["🌭", "🌿", "🎉", "👾", "👻", "🦒", "🐍", "🦑"];
+
+  // for (let i = 0; i < 6; i++) {
+  //   let index = Math.floor(Math.random() * 40);
+  //   let index2 = Math.floor(Math.random() * 4);
+  //   adjectives.push(adjectiveList[index][index2]);
+  // }
 
   const [resultName, resultDesc] = ResultSetter({ adjectives }); // ex: ["fortuneCookie", "FORTUNE COOKIE! You've got a way with words..."]
 
