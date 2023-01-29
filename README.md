@@ -8,10 +8,8 @@ This will be a compliment generator for people you know. It's a fun combination 
 
 ### IMMEDIATE
 
-- change subheader size shrinking and color
 - add can't submit message and submit button validation
 - create 'take screenshot/save image' button in results
-- fix line alignments on some versions in Results
 
 ### NEXT
 

@@ -157,8 +157,17 @@ const Home = ({ formEntries, setFormEntries }) => {
     }
   }
 
-  function handleSubmit() {
-    return navigate("/results");
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (
+      adjectives.length === adjectiveMax &&
+      feelings.length === feelingsMax &&
+      emojis.length === emojiMax &&
+      friendName.length > 0 &&
+      name.length > 0
+    ) {
+      return navigate("/results");
+    }
   }
 
   const adjectiveButtonGenerator = Object.entries(adjRandomizer).map((word) => {
@@ -284,7 +293,7 @@ const Home = ({ formEntries, setFormEntries }) => {
             <img src={star} alt="star" className="star star-2" />
           </div>
           {/* ADJECTIVES */}
-          <h3 className="adj-header header-text">
+          <h3 className="adj-header header-text" id="adjectives">
             Now, pick {adjectiveMax} adjectives to describe{" "}
             {friendName ? friendName : "your friend"}:
           </h3>
@@ -323,7 +332,7 @@ const Home = ({ formEntries, setFormEntries }) => {
             ></textarea>
           </section>
           {/* FEELINGS */}
-          <section className="feelings-container">
+          <section className="feelings-container" id="feelings">
             <h3 className="header-text">
               How does {friendName ? friendName : "your friend"} make you{" "}
               <em>feel</em>? Pick {feelingsMax}:
@@ -334,7 +343,7 @@ const Home = ({ formEntries, setFormEntries }) => {
           </section>
           {/* EMOJI */}
           <div className="emoji-line">😁🤩🤔🤪🥸🤓🤠🤧</div>
-          <h3 className="header-text emoji-header">
+          <h3 className="header-text emoji-header" id="emojis">
             Emoji time! Which of these do you most associate with{" "}
             {friendName ? friendName : "your friend"}? Pick {emojiMax}:
           </h3>
@@ -391,14 +400,38 @@ const Home = ({ formEntries, setFormEntries }) => {
               <span>That's it! Are you ready</span>
               <span>to do this??</span>
             </h3>
-            {/* {(adjectives.length < 6 ||
-              color.length < 1 ||
-              description.length < 1 ||
-              feelings.length < 6 ||
-              emojis.length < 8 ||
-              friendName.length < 1) && (
-              <p>Please fill in/select all requested fields/amounts!</p>
-            )} */}
+            <div className="missingRequiredFields">
+              {(name.length < 1 ||
+                friendName.length < 1 ||
+                adjectives.length < adjectiveMax ||
+                feelings.length < feelingsMax ||
+                emojis.length < emojiMax) && <p>You are missing:</p>}
+              {name.length < 1 && (
+                <p>
+                  • <a href="#name">name</a>
+                </p>
+              )}
+              {friendName.length < 1 && (
+                <p>
+                  • <a href="#friendname">friend's name</a>
+                </p>
+              )}
+              {adjectives.length < adjectiveMax && (
+                <p>
+                  • {adjectiveMax} <a href="#adjectives">adjectives</a>
+                </p>
+              )}
+              {feelings.length < feelingsMax && (
+                <p>
+                  • {feelingsMax} <a href="#feelings">feelings</a>
+                </p>
+              )}
+              {emojis.length < emojiMax && (
+                <p>
+                  • {emojiMax} <a href="#emojis">emoji</a>
+                </p>
+              )}
+            </div>
             <button
               type="submit"
               className="submit-button"

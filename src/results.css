@@ -56,6 +56,13 @@
   word-wrap: break-word;
 }
 
+/* width: 25vw;
+  font-size: 1.5vw;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  line-height: 1.3; */
+
 .results-desc-short {
   font-size: 1.7vw;
 }
@@ -101,19 +108,19 @@
 
 .adj-hr {
   position: absolute;
-  left: 18vw;
+  left: 19vw;
   margin-left: 20px;
   height: 3px;
-  width: 9.5vw;
+  width: 8vw;
   box-shadow: 1px 1px 5px #11dee6, inset 5px 5px 5px #31e4ea;
 }
 
 .emoji-hr {
   position: absolute;
   left: 26.5vw;
-  top: 61vh;
+  top: 64.5vh;
   height: 3px;
-  width: 3vw;
+  width: 3.5vw;
   box-shadow: 1px 1px 5px #11dee6, inset 5px 5px 5px #31e4ea;
 }
 
@@ -128,7 +135,7 @@
 
 .results-type-hr {
   position: absolute;
-  top: 56vh;
+  top: 59.5vh;
   right: 29vw;
   height: 3px;
   width: 3vw;
@@ -194,6 +201,7 @@
 
 .results-adjectives {
   margin-top: 3vh;
+  height: 36vh;
 }
 
 .results-emoji {
