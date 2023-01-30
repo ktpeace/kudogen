@@ -70,6 +70,36 @@
 .results-desc-long {
   font-size: 1.5vw;
 }
+/* <div className="results-camera-kudogen">
+            <a
+              id="camera"
+              onClick={onButtonClick}
+              ref={cameraRef}
+              className="results-cam-link"
+            >
+              <img src={camera} alt="save result" className="results-camera" />
+            </a> */
+.results-camera-kudogen {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+
+.results-cam-link {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.results-camera {
+  align-self: flex-start;
+  height: 3.7vw;
+}
+
+.results-camera:hover {
+  cursor: pointer;
+}
 
 .results-kudogen {
   align-self: flex-start;

@@ -7,9 +7,9 @@ export const emojiList1a = [
   "🌈",
   "⚡",
   "❄️",
-  "🔥",
   "💧",
-  "⛺",
+  "🔥",
+  "💡",
 ];
 export const emojiList1b = [
   "🦢",
@@ -44,9 +44,9 @@ export const emojiList2b = [
   "🏝️",
   "⛰️",
   "🗺️",
+  "⛺",
   "🛏️",
   "🧸",
-  "💡",
 ];
 // food
 export const emojiList3a = [

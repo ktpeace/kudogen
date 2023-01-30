@@ -15,6 +15,19 @@ const Credits = () => {
       <main>
         <h2>Images</h2>
         <p>
+          <a
+            href="https://www.flaticon.com/free-icons/camera"
+            title="camera icons"
+          >
+            Camera icon
+          </a>{" "}
+          by{" "}
+          <a href="https://www.flaticon.com/authors/ilham-fitrotul-hayat">
+            Ilham Fitrotul Hayat
+          </a>{" "}
+          on Flaticon
+        </p>
+        <p>
           Images by{" "}
           <a href="https://www.freepik.com/author/pikisuperstar">
             pikisuperstar

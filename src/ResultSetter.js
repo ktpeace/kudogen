@@ -46,7 +46,6 @@ const ResultSetter = ({ adjectives }) => {
   // if there is a tie, select randomly
   if (max.length > 1) {
     let index = Math.floor(Math.random() * max.length);
-    console.log(max.length, "index: ", index);
     maxKey[0] = maxKey[index];
     maxKeyDescription[0] = maxKeyDescription[index];
   }

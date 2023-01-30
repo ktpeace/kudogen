@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
-import html2canvas from "html2canvas";
+import * as htmlToImage from "html-to-image";
+import { toPng } from "html-to-image";
 import ResultSetter from "./ResultSetter";
+import { adjectiveList } from "./data/adjectives";
 import "./results.css";
 import flapjacks from "./assets/breakfast/flapjacks.png";
 import egg from "./assets/breakfast/egg.png";
@@ -23,11 +25,7 @@ import pineapple from "./assets/produce/pineapple.png";
 import flan from "./assets/sweets/flan.png";
 import macaron from "./assets/sweets/macaron.png";
 import cupcake from "./assets/sweets/cupcake.png";
-import { adjectiveList } from "./data/adjectives";
-
-// TODO
-// make all image sizes work
-// take screenshot option
+import camera from "./assets/camera.png";
 
 const Results = ({
   formEntries: {
@@ -40,10 +38,47 @@ const Results = ({
     emojis,
   },
 }) => {
-  // const screenshot = html2canvas(document.querySelector("#results-main"));
-  // html2canvas(document.querySelector("#capture")).then((canvas) => {
-  //     document.body.appendChild(canvas);
-  //   });
+  // capture DOM element containing content to become image for downloading, and DOM camera icon for setting download
+  const imageRef = useRef(null);
+  const cameraRef = useRef(null);
+
+  // when someone clicks camera icon, get screenshot of current view and provoke download of the image
+
+  //filter
+  // (domNode: HTMLElement) => boolean
+  // A function taking DOM node as argument. Should return true if passed node should be included in the output. Excluding node means excluding its children as well.
+
+  // You can add filter to every image function. For example,
+
+  // const filter = (node: HTMLElement) => {
+  //   const exclusionClasses = ['remove-me', 'secret-div'];
+  //   return !exclusionClasses.some((classname) => node.classList?.contains(classname));
+  // }
+
+  // htmlToImage.toJpeg(node, { quality: 0.95, filter: filter});
+  const onButtonClick = async () => {
+    if (imageRef.current === null) return;
+    const cam = cameraRef.current;
+    if (cam.hasAttribute("download")) {
+      cameraRef.current.click();
+    } else {
+      const filter = (node) => {
+        return node.id !== "camera";
+      };
+      toPng(imageRef.current, { cacheBust: true, filter: filter })
+        .then((dataUrl) => {
+          cam.setAttribute("download", "result.png");
+          cam.setAttribute("href", dataUrl);
+          console.log(cameraRef.current);
+          cameraRef.current.click();
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  };
+
+  // temporary default values for testing (will either delete or move to original state setters)
   if (!name) name = "me";
   if (!friendName) friendName = "You";
   if (!adjectives) {
@@ -54,7 +89,6 @@ const Results = ({
       adjectives.push(adjectiveList[index][index2]);
     }
   }
-
   if (!color) color = "#fedeff";
   if (!feelings)
     feelings = [
@@ -67,8 +101,10 @@ const Results = ({
     ];
   if (!emojis) emojis = ["🌭", "🌿", "🎉", "👾", "👻", "🦒", "🐍", "🦑"];
 
+  // get which result to show + its description
   const [resultName, resultDesc] = ResultSetter({ adjectives }); // ex: ["fortuneCookie", "FORTUNE COOKIE! You've got a way with words..."]
 
+  // set image based on result
   let image;
   switch (resultName) {
     case "flapjacks":
@@ -181,7 +217,7 @@ const Results = ({
 
   return (
     <div className="results-page">
-      <main id="results-main">
+      <main id="results-main" className="results-main" ref={imageRef}>
         <div className="results-header results-padding">
           <div>
             <h2
@@ -201,11 +237,22 @@ const Results = ({
               {description}
             </p>
           </div>
-          <h3 className="results-kudogen">
-            <a href="/" className="results-kudogen-link" title="restart">
-              KUDOGEN
+          <div className="results-camera-kudogen">
+            {/* React says not to do below, but it's OK because href attribute will be set on click */}
+            <a
+              id="camera"
+              onClick={onButtonClick}
+              ref={cameraRef}
+              className="results-cam-link"
+            >
+              <img src={camera} alt="save result" className="results-camera" />
             </a>
-          </h3>
+            <h3 className="results-kudogen">
+              <a href="/" className="results-kudogen-link" title="restart">
+                KUDOGEN
+              </a>
+            </h3>
+          </div>
         </div>
 
         <div className="results-four-sections results-padding">
@@ -249,8 +296,7 @@ const Results = ({
                 className="results-type-p neon-minor"
                 style={{
                   color: `${color}`,
-                  textShadow: `0 0 2px ${color}, 0 0 2px ${color}, 0 0 2px ${color},
-    0 0 0px ${color}`,
+                  textShadow: `0 0 2px ${color}, 0 0 2px ${color}, 0 0 2px ${color}, 0 0 0px ${color}`,
                 }}
               >
                 {resultDesc}
