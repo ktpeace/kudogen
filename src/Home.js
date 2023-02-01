@@ -408,7 +408,7 @@ const Home = ({ formEntries, setFormEntries }) => {
                 emojis.length < emojiMax) && <p>You are missing:</p>}
               {name.length < 1 && (
                 <p>
-                  • <a href="#name">name</a>
+                  • <a href="#username">name</a>
                 </p>
               )}
               {friendName.length < 1 && (

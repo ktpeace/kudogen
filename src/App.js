@@ -16,32 +16,29 @@ function App() {
     emojis: "",
   });
 
-  const router = createBrowserRouter([
-    {
-      path: "/kudogen",
-      element: (
-        <Home formEntries={formEntries} setFormEntries={setFormEntries} />
-      ),
-    },
-    {
-      path: "/",
-      element: (
-        <Home formEntries={formEntries} setFormEntries={setFormEntries} />
-      ),
-    },
-    {
-      path: "/results",
-      element: <Results formEntries={formEntries} />,
-    },
-    {
-      path: "/about",
-      element: <About />,
-    },
-    {
-      path: "/credits",
-      element: <Credits />,
-    },
-  ]);
+  const router = createBrowserRouter(
+    [
+      {
+        path: "/",
+        element: (
+          <Home formEntries={formEntries} setFormEntries={setFormEntries} />
+        ),
+      },
+      {
+        path: "/results",
+        element: <Results formEntries={formEntries} />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/credits",
+        element: <Credits />,
+      },
+    ],
+    { basename: "/kudogen" }
+  );
 
   return <RouterProvider router={router} />;
 }

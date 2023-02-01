@@ -261,3 +261,8 @@
   text-transform: none;
   font-family: "Rubik", sans-serif;
 }
+
+.results-home-ad {
+  text-decoration: none;
+  color: #229ab4;
+}

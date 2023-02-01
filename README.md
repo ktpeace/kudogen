@@ -9,7 +9,7 @@ This will be a compliment generator for people you know. It's a fun combination 
 ### IMMEDIATE
 
 - make responsive
-- fix routing on live site (can't go straight to results)
+- make camera button save to images for mobile
 
 ### NEXT
 
@@ -18,6 +18,7 @@ This will be a compliment generator for people you know. It's a fun combination 
 
 ### LATER
 
+- center adjectives/feelings
 - add reset button for adjs + feelings
 - remove unnecessary dependencies like htmltocanvas
 - remove camera icon from results screenshot
@@ -27,3 +28,5 @@ This will be a compliment generator for people you know. It's a fun combination 
 - handle a default routing/404 case
 - why can't I right click open submit button
 - add more feelings
+- make emojis variable
+- a few more adjs? analytical/rational/logical/formulaic

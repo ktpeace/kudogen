@@ -43,31 +43,20 @@ const Results = ({
   const cameraRef = useRef(null);
 
   // when someone clicks camera icon, get screenshot of current view and provoke download of the image
-
-  //filter
-  // (domNode: HTMLElement) => boolean
-  // A function taking DOM node as argument. Should return true if passed node should be included in the output. Excluding node means excluding its children as well.
-
-  // You can add filter to every image function. For example,
-
-  // const filter = (node: HTMLElement) => {
-  //   const exclusionClasses = ['remove-me', 'secret-div'];
-  //   return !exclusionClasses.some((classname) => node.classList?.contains(classname));
-  // }
-
-  // htmlToImage.toJpeg(node, { quality: 0.95, filter: filter});
   const onButtonClick = async () => {
     if (imageRef.current === null) return;
     const cam = cameraRef.current;
     if (cam.hasAttribute("download")) {
       cameraRef.current.click();
     } else {
+      // exclude camera icon from image
       const filter = (node) => {
         return node.id !== "camera";
       };
+      // set href to image data and add download attribute to camera anchor
       toPng(imageRef.current, { cacheBust: true, filter: filter })
         .then((dataUrl) => {
-          cam.setAttribute("download", "result.png");
+          cam.setAttribute("download", "kudogen-result.png");
           cam.setAttribute("href", dataUrl);
           console.log(cameraRef.current);
           cameraRef.current.click();
@@ -308,7 +297,10 @@ const Results = ({
         <section className="results-image-footer">
           <p>
             Made for you by {name} at KUDOGEN. Generate a compliment for someone
-            you know at https://ktpeace.github.io/kudogen/
+            you know at{" "}
+            <a href="/" className="results-home-ad">
+              https://ktpeace.github.io/kudogen/
+            </a>
           </p>
         </section>
       </main>

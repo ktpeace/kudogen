@@ -16,6 +16,9 @@ const About = () => {
       <footer className="credits-footer">
         <ul className="footer-list">
           <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
             <Link to="/about">About</Link>
           </li>
           <li>
