@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/kudogen/static/css/main.d7ce1ee8.css",
+    "main.css": "/kudogen/static/css/main.c54cbd20.css",
     "main.js": "/kudogen/static/js/main.bf121094.js",
     "static/media/cactus.png": "/kudogen/static/media/cactus.42939f0ba8bca0a7f19c.png",
     "static/media/pineapple.png": "/kudogen/static/media/pineapple.e867853e2a51bb5b4873.png",
@@ -24,11 +24,11 @@
     "static/media/cloud.png": "/kudogen/static/media/cloud.4b753691290679d04f06.png",
     "static/media/vger-bold.ttf": "/kudogen/static/media/vger-bold.93451ed7eb3f9d5a070e.ttf",
     "index.html": "/kudogen/index.html",
-    "main.d7ce1ee8.css.map": "/kudogen/static/css/main.d7ce1ee8.css.map",
+    "main.c54cbd20.css.map": "/kudogen/static/css/main.c54cbd20.css.map",
     "main.bf121094.js.map": "/kudogen/static/js/main.bf121094.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7ce1ee8.css",
+    "static/css/main.c54cbd20.css",
     "static/js/main.bf121094.js"
   ]
 }
