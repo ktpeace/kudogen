@@ -698,6 +698,7 @@ footer Link:hover {
   }
 
   .home-header h1 {
+    margin-left: 0;
     writing-mode: horizontal-tb;
     font-size: 9vw;
   }
@@ -752,7 +753,8 @@ footer Link:hover {
     height: 46vw;
     width: 46vw;
   }
-  */ .turquoise-text {
+
+  .turquoise-text {
     color: #00f7ff;
   }
 }
