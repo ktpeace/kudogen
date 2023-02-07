@@ -247,11 +247,20 @@ const Home = ({ formEntries, setFormEntries }) => {
       <header className="home-header">
         <div className="circle circle-1"></div>
         <div className="circle circle-2"></div>
-        <div>
+        <div className="home-header-text">
           <h1>
             <span className="header-k">K</span>udogen
           </h1>
-          <h2>generate a unique compliment image for your friends </h2>
+          <h2>
+            <span className="home-turquoise-text">generate a unique</span>{" "}
+            <span className="mobile-text-break-shown">compli- </span>
+            <span className="prevent-break">
+              <span className="mobile-text-break-hidden">compli</span>
+              <span>ment</span>
+            </span>{" "}
+            <span>image</span>{" "}
+            <span className="home-turquoise-text">for your friends</span>
+          </h2>
           <img src={pointer} alt="arrow" className="pointer" />
           <span className="whomever handwriting">(or whomever!)</span>
         </div>
