@@ -181,6 +181,7 @@ const Home = ({ formEntries, setFormEntries }) => {
           adjectives.includes(word[1]) ? "home-button-selected" : ""
         }`}
         onClick={handleAdjectiveButtonClick}
+        onTouchEnd={handleAdjectiveButtonClick}
       >
         {word[1]}
       </button>
@@ -198,6 +199,7 @@ const Home = ({ formEntries, setFormEntries }) => {
           feelings.includes(word) ? "feelings-button-selected" : ""
         }`}
         onClick={handleFeelingClick}
+        onTouchEnd={handleFeelingClick}
       >
         {word}
       </button>
