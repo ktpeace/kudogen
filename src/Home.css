@@ -756,7 +756,67 @@ footer Link:hover {
   }
 
   .friendname-set {
-    margin-bottom: 7vw;
+    margin-bottom: 15vw;
+  }
+
+  /* Greeting */
+  .wavy {
+    width: 200vw;
+    height: 30vh;
+    margin-bottom: 7vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 4vw;
+    /* source for below: https://css-generators.com/wavy-shapes */
+    --mask: radial-gradient(52.84px at 50% 73.5px, #000 99%, #0000 101%)
+        calc(50% - 60px) 0/120px 51% repeat-x,
+      radial-gradient(52.84px at 50% -43.5px, #0000 99%, #000 101%) 50% 30px/120px
+        calc(51% - 30px) repeat-x,
+      radial-gradient(52.84px at 50% calc(100% - 73.5px), #000 99%, #0000 101%)
+        calc(50% - 60px) 100%/120px 51% repeat-x,
+      radial-gradient(52.84px at 50% calc(100% + 43.5px), #0000 99%, #000 101%)
+        50% calc(100% - 30px) / 120px calc(51% - 30px) repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+  }
+
+  .star {
+    object-fit: contain;
+    width: 15vw;
+    height: auto;
+    position: relative;
+  }
+
+  .star-1 {
+    bottom: 5vw;
+  }
+
+  .star-2 {
+    top: 15vw;
+  }
+
+  .wavy p {
+    margin: 0 6vw;
+  }
+
+  .greeting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+    max-width: 65vw;
+    font-size: 9vw;
+  }
+
+  .greeting-name {
+    font-size: 8vw;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-width: 70vw;
+    text-align: center;
   }
 }
 
@@ -868,6 +928,73 @@ footer Link:hover {
     font-size: 10vw;
     font-family: "Rubik", sans-serif;
     font-weight: 400;
+  }
+
+  .username-set {
+    margin-bottom: 5vw;
+  }
+
+  .friendname-set {
+    margin-bottom: 7vw;
+  }
+
+  /* Greeting */
+  .wavy {
+    width: 100vw;
+    height: 33vw;
+    margin-bottom: 7vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 4vw;
+    /* source for below: https://css-generators.com/wavy-shapes */
+    --mask: radial-gradient(52.84px at 50% 73.5px, #000 99%, #0000 101%)
+        calc(50% - 60px) 0/120px 51% repeat-x,
+      radial-gradient(52.84px at 50% -43.5px, #0000 99%, #000 101%) 50% 30px/120px
+        calc(51% - 30px) repeat-x,
+      radial-gradient(52.84px at 50% calc(100% - 73.5px), #000 99%, #0000 101%)
+        calc(50% - 60px) 100%/120px 51% repeat-x,
+      radial-gradient(52.84px at 50% calc(100% + 43.5px), #0000 99%, #000 101%)
+        50% calc(100% - 30px) / 120px calc(51% - 30px) repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+  }
+
+  .star {
+    object-fit: contain;
+    width: 9%;
+    height: auto;
+    position: relative;
+  }
+
+  .star-1 {
+    bottom: 2vw;
+  }
+
+  .star-2 {
+    top: 9vw;
+  }
+
+  .wavy p {
+    margin: 0 6vw;
+  }
+
+  .greeting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+    max-width: 80vw;
+    font-size: 6vw;
+  }
+
+  .greeting-name {
+    font-size: 5vw;
+    white-space: initial;
+    word-wrap: normal;
+    max-width: initial;
   }
 }
 
