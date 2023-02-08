@@ -22,6 +22,7 @@ This will be a compliment generator for people you know. It's a fun combination 
 - add reset button for adjs + feelings
 - remove unnecessary dependencies like htmltocanvas
 - remove camera icon from results screenshot
+- make darker colors lighter
 - refactor code
 - change colors to not need to plug in hashtags so any color format works in arrays
 - make sure results starts with scrollbar at top

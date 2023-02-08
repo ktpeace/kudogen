@@ -10,8 +10,7 @@
 
 .credits-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   padding: 5vh 0;
 }
 
@@ -21,8 +20,9 @@
 
 .credits-page main {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  /* flex-direction: column;
+  align-items: center; */
   gap: 5vh;
 }
 

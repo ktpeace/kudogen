@@ -242,7 +242,7 @@ const Home = ({ formEntries, setFormEntries }) => {
   };
 
   return (
-    <div>
+    <div className="home-parent-div">
       {/* HEADER */}
       <header className="home-header">
         <div className="circle circle-1"></div>
@@ -258,8 +258,10 @@ const Home = ({ formEntries, setFormEntries }) => {
               <span className="mobile-text-break-hidden">compli</span>
               <span>ment</span>
             </span>{" "}
-            <span>image</span>{" "}
-            <span className="home-turquoise-text">for your friends</span>
+            <span className="home-word-image">image</span>{" "}
+            <span className="home-turquoise-text">
+              for <span className="desktop-split">your friends</span>
+            </span>
           </h2>
           <img src={pointer} alt="arrow" className="pointer" />
           <span className="whomever handwriting">(or whomever!)</span>
@@ -268,8 +270,8 @@ const Home = ({ formEntries, setFormEntries }) => {
       </header>
       {/* GET STARTED */}
       <main className="home-main">
-        <p className="get-started handwriting">Let's get started!</p>
         <form>
+          <p className="get-started handwriting">Let's get started!</p>
           <div className="name-set username-set">
             <label htmlFor="username">My name:</label>
             <input
@@ -455,9 +457,9 @@ const Home = ({ formEntries, setFormEntries }) => {
       {/* FOOTER */}
       <footer>
         <ul className="footer-list">
-          <li>
+          {/* <li>
             <Link to="/about">About</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/credits">Credits</Link>
           </li>

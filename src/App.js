@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Home";
 import Results from "./Results";
-import About from "./About";
+// import About from "./About";
 import Credits from "./Credits";
 
 function App() {
@@ -28,10 +28,10 @@ function App() {
         path: "/results",
         element: <Results formEntries={formEntries} />,
       },
-      {
-        path: "/about",
-        element: <About />,
-      },
+      // {
+      //   path: "/about",
+      //   element: <About />,
+      // },
       {
         path: "/credits",
         element: <Credits />,
