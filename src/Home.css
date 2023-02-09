@@ -231,6 +231,10 @@ body {
   border-bottom: 150px solid transparent;
 }
 
+.mobile-text-break-shown {
+  display: none;
+}
+
 /************* #MAIN *************/
 .home-main {
   padding-top: 15vw;
@@ -358,11 +362,11 @@ body {
   color: #fff;
 }
 
-.home-button:hover {
+/* .home-button:hover {
   border: 2px solid #8a9099;
   background-color: #8a9099;
   cursor: pointer;
-}
+} */
 
 .home-button-selected {
   border: 2px solid #8a9099;
@@ -403,19 +407,19 @@ body {
   width: 15vw;
 }
 
-.home-main path:hover {
+/* .home-main path:hover {
   stroke: #fff;
   stroke-width: 7px;
-}
+} */
 
 .color-selected {
   stroke: #fff;
   stroke-width: 7px;
 }
 
-.color-splash:hover {
+/* .color-splash:hover {
   cursor: pointer;
-}
+} */
 
 .gimme {
   align-self: flex-end;
@@ -424,10 +428,10 @@ body {
   font-size: 2vw;
 }
 
-.gimme:hover {
+/* .gimme:hover {
   cursor: pointer;
   color: #00f7ff;
-}
+} */
 
 /* DESCRIPTION */
 
@@ -525,12 +529,12 @@ body {
   border: 4px solid #fff;
   border-radius: 50%;
 }
-
+/*
 .emoji-div:hover {
   background-color: #b9f0f1;
   border: 4px solid #00f7ff;
   cursor: pointer;
-}
+} */
 
 .emoji-selected {
   background-color: #b9f0f1;
@@ -600,12 +604,12 @@ body {
   color: #000;
 }
 
-.submit-button:hover {
+/* .submit-button:hover {
   cursor: pointer;
   border: 3px solid #00f7ff;
   background-color: #000;
   color: #00f7ff;
-}
+} */
 
 /* FOOTER */
 
@@ -628,15 +632,11 @@ footer Link {
   color: #45474b;
   text-transform: uppercase;
 }
-
+/*
 footer a:hover,
 footer Link:hover {
   color: #000;
-}
-
-.mobile-text-break-shown {
-  display: none;
-}
+} */
 
 /* MEDIA QUERIES */
 @media (min-width: 280px) {
@@ -842,13 +842,15 @@ footer Link:hover {
     color: #fff;
   }
 
-  .home-button:hover {
+  /* .home-button:hover {
     border: 2px solid #8a9099;
     background-color: #8a9099;
     cursor: pointer;
-  }
+  } */
 
   .home-button-selected {
+    /* background-color: #000;
+    border: 2px solid #000; */
     border: 2px solid #8a9099;
     background-color: #8a9099;
   }
@@ -916,10 +918,9 @@ footer Link:hover {
     font-size: 5vw;
   }
 
-  /* .gimme:hover {
-    cursor: pointer;
+  .gimme:active {
     color: #00f7ff;
-  } */
+  }
 
   /* Descriptions */
 
@@ -941,7 +942,7 @@ footer Link:hover {
   #description {
     margin: 0 12vw;
     padding: 3vh;
-    padding-bottom: 5.5vh;
+    padding-bottom: 4vh;
     border: none;
     border-radius: 8px;
     font-size: 5vw;
@@ -952,10 +953,11 @@ footer Link:hover {
   /* FEELINGS */
 
   .feelings-container {
-    padding: 20vh 0;
+    padding: 10vh 0 10vh;
     display: flex;
     flex-direction: column;
-    gap: 9vh;
+    gap: 5vh;
+    font-size: 7vw;
     background-color: #000;
     color: white;
   }
@@ -975,33 +977,37 @@ footer Link:hover {
 
   .emoji-line {
     position: relative;
-    bottom: 5vh;
+    bottom: 2vh;
+    font-size: 8vw;
   }
 
   .emoji-header {
-    padding-top: 12vh;
-    margin-bottom: 10vh;
+    padding-top: 5vh;
+    margin-bottom: 6vh;
+    font-size: 7vw;
   }
 
   .emoji-categories {
+    justify-content: center;
     display: flex;
+    flex-wrap: wrap;
     gap: 7vw;
-    margin-bottom: 10vh;
+    margin-bottom: 6vh;
     text-transform: uppercase;
-    font-size: 3vw;
+    font-size: 5vw;
   }
 
   .emoji-col-container {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 7vh;
+    gap: 2vh;
   }
 
   .emoji-cols {
     display: flex;
     justify-content: center;
-    gap: 2vw;
+    gap: 1vw;
   }
 
   .emoji-col {
@@ -1009,12 +1015,13 @@ footer Link:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2vh;
+    gap: 0.3vh;
+    font-size: 9vw;
   }
 
   .emoji-div {
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1022,12 +1029,6 @@ footer Link:hover {
     background-color: #fff;
     border: 4px solid #fff;
     border-radius: 50%;
-  }
-
-  .emoji-div:hover {
-    background-color: #b9f0f1;
-    border: 4px solid #00f7ff;
-    cursor: pointer;
   }
 
   .emoji-selected {
@@ -1039,18 +1040,31 @@ footer Link:hover {
   /* SUBMISSION */
 
   .wavy-bottom {
-    margin-bottom: -50vh;
+    margin-bottom: -20vh;
     position: relative;
     z-index: -1;
   }
 
+  .submit-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    left: -70px;
+    transform: rotate(-20deg);
+    font-size: 4vw;
+    line-height: 1.6;
+  }
+
   .missingRequiredFields {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 0.5vw;
-    width: 55vw;
+    width: 70vw;
     font-weight: 400;
-    font-size: 1.5vw;
+    font-size: 3vw;
     color: rgb(255, 166, 0);
   }
 
@@ -1061,35 +1075,23 @@ footer Link:hover {
 
   .submit-container {
     width: 100vw;
-    padding-top: 20vh;
-    padding-bottom: 60vh;
+    padding-top: 10vh;
+    padding-bottom: 30vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 9vh;
+    gap: 4vh;
     background-color: #000;
     color: white;
   }
 
-  .submit-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    bottom: 20px;
-    left: -290px;
-    transform: rotate(-20deg);
-    font-size: 3vw;
-    line-height: 1.6;
-  }
-
   .submit-button {
     padding: 2vw 0;
-    width: 55vw;
+    width: 85vw;
     border: 3px solid #000;
     border-radius: 50px;
     font-family: "V-Ger Grotesque", sans-serif;
-    font-size: 3vw;
+    font-size: 4.5vw;
     font-weight: 800;
     letter-spacing: 0.7rem;
     line-height: 1.5;
@@ -1098,15 +1100,77 @@ footer Link:hover {
     color: #000;
   }
 
+  .submit-button:active {
+    border: 3px solid #00f7ff;
+    background-color: #000;
+    color: #00f7ff;
+  }
+
+  /* .submit-button:hover {
+    cursor: pointer;
+    border: 3px solid #00f7ff;
+    background-color: #000;
+    color: #00f7ff;
+  } */
+
+  /* Footer */
+
+  footer {
+    padding-top: 3vh;
+    padding-bottom: 5vh;
+    background-color: #8a9099;
+  }
+
+  .footer-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  footer a,
+  footer Link {
+    font-size: 4vw;
+    text-decoration: none;
+    color: #45474b;
+    text-transform: uppercase;
+  }
+
+  footer a:hover,
+  footer Link:hover {
+    color: #000;
+  }
+}
+
+@media (min-width: 480px) {
+  /* Hovers */
+  .home-main path:hover {
+    stroke: #fff;
+    stroke-width: 7px;
+  }
+  .color-splash:hover {
+    cursor: pointer;
+  }
+  .gimme:hover {
+    cursor: pointer;
+    color: #00f7ff;
+  }
+  .emoji-div:hover {
+    background-color: #b9f0f1;
+    border: 4px solid #00f7ff;
+    cursor: pointer;
+  }
   .submit-button:hover {
     cursor: pointer;
     border: 3px solid #00f7ff;
     background-color: #000;
     color: #00f7ff;
   }
-}
+  footer a:hover,
+  footer Link:hover {
+    color: #000;
+  }
 
-@media (min-width: 480px) {
+  /* Header */
   .home-header-text {
     display: block;
   }
@@ -1384,11 +1448,6 @@ footer Link:hover {
     font-size: 2vw;
   }
 
-  .gimme:hover {
-    cursor: pointer;
-    color: #00f7ff;
-  }
-
   .description-container {
     padding: 20vh 5vw;
     display: flex;
@@ -1421,6 +1480,7 @@ footer Link:hover {
     display: flex;
     flex-direction: column;
     gap: 9vh;
+    font-size: 5vw;
     background-color: #000;
     color: white;
   }
@@ -1439,17 +1499,21 @@ footer Link:hover {
   /* EMOJIS */
 
   .emoji-line {
+    display: flex;
     position: relative;
     bottom: 5vh;
+    font-size: 5vw;
   }
 
   .emoji-header {
     padding-top: 12vh;
     margin-bottom: 10vh;
+    font-size: 5vw;
   }
 
   .emoji-categories {
     display: flex;
+    /* flex-wrap: nowrap; */
     gap: 7vw;
     margin-bottom: 10vh;
     text-transform: uppercase;
@@ -1475,11 +1539,12 @@ footer Link:hover {
     align-items: center;
     justify-content: center;
     gap: 2vh;
+    font-size: 5vw;
   }
 
   .emoji-div {
-    width: 5rem;
-    height: 5rem;
+    width: 7rem;
+    height: 7rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1568,5 +1633,30 @@ footer Link:hover {
     border: 3px solid #00f7ff;
     background-color: #000;
     color: #00f7ff;
+  }
+
+  footer {
+    padding-top: 2vh;
+    padding-bottom: 5vh;
+    background-color: #8a9099;
+  }
+
+  .footer-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  footer a,
+  footer Link {
+    font-size: 2vw;
+    text-decoration: none;
+    color: #45474b;
+    text-transform: uppercase;
+  }
+
+  footer a:hover,
+  footer Link:hover {
+    color: #000;
   }
 }

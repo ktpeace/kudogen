@@ -83,18 +83,21 @@ const Home = ({ formEntries, setFormEntries }) => {
   }
 
   function handleAdjectiveButtonClick(e) {
+    console.log("handleadjclicked");
     const adj = e.target.value;
     if (adjectives.includes(adj)) {
       setFormEntries((prev) => {
         const adjectives = prev.adjectives.filter((el) => el !== adj);
         return { ...formEntries, adjectives };
       });
+      console.log("remove", formEntries.adjectives);
     } else {
       adjectives.length < adjectiveMax &&
         setFormEntries({
           ...formEntries,
           adjectives: [...formEntries.adjectives, adj],
         });
+      console.log("add", formEntries.adjectives);
     }
   }
 
@@ -181,7 +184,6 @@ const Home = ({ formEntries, setFormEntries }) => {
           adjectives.includes(word[1]) ? "home-button-selected" : ""
         }`}
         onClick={handleAdjectiveButtonClick}
-        onTouchEnd={handleAdjectiveButtonClick}
       >
         {word[1]}
       </button>
@@ -199,7 +201,6 @@ const Home = ({ formEntries, setFormEntries }) => {
           feelings.includes(word) ? "feelings-button-selected" : ""
         }`}
         onClick={handleFeelingClick}
-        onTouchEnd={handleFeelingClick}
       >
         {word}
       </button>

@@ -249,7 +249,7 @@ const Results = ({
             {/* ADJECTIVES */}
             <section className="results-adjectives neon-minor">
               <div className="results-header-space results-header-pair">
-                <h4 className="neon-minor">I THINK YOU ARE</h4>
+                <h4 className="neon-minor results-think">I THINK YOU ARE</h4>
                 <hr className="adj-hr"></hr>
               </div>
               <div className="results-adj-container">{adjectivesMapper}</div>
@@ -258,7 +258,9 @@ const Results = ({
             <section className="results-emojis">
               <div className="results-header-space results-header-pair">
                 <hr className="emoji-hr"></hr>
-                <h4 className="neon-minor">I ASSOCIATE YOU WITH</h4>
+                <h4 className="neon-minor results-associate">
+                  I ASSOCIATE YOU WITH
+                </h4>
               </div>
               <div className="results-emoji-container">{emojisMapper}</div>
             </section>
@@ -272,14 +274,16 @@ const Results = ({
             {/* FEELINGS */}
             <section className="results-feelings neon-minor">
               <hr className="feel-hr"></hr>
-              <h4 className="results-header-space test-2">YOU MAKE ME FEEL</h4>
+              <h4 className="results-header-space test-2 results-feel">
+                YOU MAKE ME FEEL
+              </h4>
               <div className="results-feel-container">{feelingsMapper}</div>
             </section>
             {/* RESULT TEXT */}
             <section className="results-type">
               <hr className="results-type-hr"></hr>
-              <h4 className="results-header-space neon-minor">
-                MY RESULT FOR YOU IS
+              <h4 className="results-header-space neon-minor results-result">
+                MY RESULT FOR YOU
               </h4>
               <p
                 className="results-type-p neon-minor"
@@ -309,9 +313,9 @@ const Results = ({
           <li>
             <Link to="/">Home</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/about">About</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/credits">Credits</Link>
           </li>
