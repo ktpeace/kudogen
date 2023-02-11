@@ -793,7 +793,7 @@ footer Link:hover {
   }
 
   .star-2 {
-    top: 15vw;
+    top: 11vw;
   }
 
   .wavy p {
@@ -1141,7 +1141,7 @@ footer Link:hover {
   }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 550px) {
   /* Hovers */
   .home-main path:hover {
     stroke: #fff;
@@ -1499,7 +1499,6 @@ footer Link:hover {
   /* EMOJIS */
 
   .emoji-line {
-    display: flex;
     position: relative;
     bottom: 5vh;
     font-size: 5vw;
@@ -1653,6 +1652,7 @@ footer Link:hover {
     text-decoration: none;
     color: #45474b;
     text-transform: uppercase;
+    font-family: "V-Ger Grotesque", sans-serif;
   }
 
   footer a:hover,

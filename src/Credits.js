@@ -7,12 +7,11 @@ const Credits = () => {
     <div className="credits-page">
       <header className="credits-header">
         <h1>Credits</h1>
-        <div className="flex-jerryrig-home go-homes">🏠</div>
       </header>
       <main>
-        <h2>Images</h2>
+        {/* <h2>Images</h2> */}
         <section className="credits-links">
-          <p>
+          <p className="credits-flaticon">
             <a
               href="https://www.flaticon.com/free-icons/camera"
               title="camera icons"
@@ -26,12 +25,14 @@ const Credits = () => {
             on Flaticon
           </p>
           <div>
-            Images by{" "}
-            <a href="https://www.freepik.com/author/pikisuperstar">
-              pikisuperstar
-            </a>{" "}
-            on Freepik
-            <ul>
+            <p className="credits-images">
+              Images by{" "}
+              <a href="https://www.freepik.com/author/pikisuperstar">
+                pikisuperstar
+              </a>{" "}
+              on Freepik
+            </p>
+            <ul className="credits-image-ul">
               <li>
                 <a href="https://www.freepik.com/free-vector/watercolor-kawaii-nature-character-set_28203887.htm#&position=5&from_view=collections">
                   Nature

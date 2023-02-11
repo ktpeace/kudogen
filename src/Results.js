@@ -38,6 +38,12 @@ const Results = ({
     emojis,
   },
 }) => {
+  // friendName = "WWWWWWWWWWWWWW";
+  // description =
+  //   "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW";
+  // https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+  // let vh = window.innerHeight * 0.01;
+  // document.documentElement.style.setProperty("--vh", `${vh}px`);
   // capture DOM element containing content to become image for downloading, and DOM camera icon for setting download
   const imageRef = useRef(null);
   const cameraRef = useRef(null);
@@ -207,81 +213,104 @@ const Results = ({
   return (
     <div className="results-page">
       <main id="results-main" className="results-main" ref={imageRef}>
-        <div className="results-header results-padding">
-          <div>
-            <h2
-              className={`neon-major results-friendname ${
-                friendName.length > 10 ? "results-friendname-long" : undefined
-              }`}
-            >
-              {friendName}
-            </h2>
-            <p
-              className={`neon-minor results-description ${
-                description.length < 35
-                  ? "results-desc-short"
-                  : "results-desc-long"
-              }`}
-            >
-              {description}
-            </p>
-          </div>
-          <div className="results-camera-kudogen">
-            {/* React says not to do below, but it's OK because href attribute will be set on click */}
-            <a
-              id="camera"
-              onClick={onButtonClick}
-              ref={cameraRef}
-              className="results-cam-link"
-            >
-              <img src={camera} alt="save result" className="results-camera" />
-            </a>
-            <h3 className="results-kudogen">
-              <a href="/" className="results-kudogen-link" title="restart">
-                KUDOGEN
+        {/* Four Rows for Vertical Layout */}
+        {/* header
+            think / feel
+            image
+            associate / result
+            footer
+        */}
+        <div className="four-rows">
+          {/* Row 1 */}
+          <div className="row-1">
+            <div className="results-header results-padding">
+              <div>
+                <h2
+                  className={`neon-major results-friendname ${
+                    friendName.length > 9
+                      ? "results-friendname-long"
+                      : undefined
+                  }`}
+                >
+                  {friendName}
+                </h2>
+                <p
+                  className={`neon-minor results-description ${
+                    description.length < 35
+                      ? "results-desc-short"
+                      : "results-desc-long"
+                  }`}
+                >
+                  {description}
+                </p>
+              </div>
+            </div>
+            <div className="results-camera-kudogen">
+              {/* React says not to do below, but it's OK because href attribute will be set on click */}
+              <a
+                id="camera"
+                onClick={onButtonClick}
+                ref={cameraRef}
+                className="results-cam-link"
+              >
+                <img
+                  src={camera}
+                  alt="save result"
+                  className="results-camera"
+                />
               </a>
-            </h3>
+              <h3 className="results-kudogen">
+                <a href="/" className="results-kudogen-link" title="restart">
+                  KUDOGEN
+                </a>
+              </h3>
+            </div>
           </div>
-        </div>
 
-        <div className="results-four-sections results-padding">
-          <div className="results-left">
+          {/* Row 2 */}
+          <div className="row-2">
             {/* ADJECTIVES */}
+            {/* <div className="flex-holder-left"></div> */}
             <section className="results-adjectives neon-minor">
               <div className="results-header-space results-header-pair">
                 <h4 className="neon-minor results-think">I THINK YOU ARE</h4>
-                <hr className="adj-hr"></hr>
+                {/* <hr className="adj-hr"></hr> */}
               </div>
               <div className="results-adj-container">{adjectivesMapper}</div>
             </section>
+            {/* FEELINGS */}
+            {/* <div className="flex-holder-right"></div> */}
+            <section className="results-feelings neon-minor">
+              {/* <hr className="feel-hr"></hr> */}
+              <h4 className="results-header-space test-2 results-feel">
+                YOU MAKE ME FEEL
+              </h4>
+              <div className="results-feel-container">{feelingsMapper}</div>
+            </section>
+          </div>
+
+          {/* Row 3 */}
+          <div className="col-mid row-3">
+            <div className="ring">
+              <img src={image} alt={image} className="results-img" />
+            </div>
+          </div>
+
+          {/* Row 4 */}
+          <div className="row-4">
             {/* EMOJI */}
             <section className="results-emojis">
               <div className="results-header-space results-header-pair">
-                <hr className="emoji-hr"></hr>
+                {/* <hr className="emoji-hr"></hr> */}
                 <h4 className="neon-minor results-associate">
                   I ASSOCIATE YOU WITH
                 </h4>
               </div>
               <div className="results-emoji-container">{emojisMapper}</div>
             </section>
-          </div>
-
-          <div className="ring">
-            <img src={image} alt={image} className="results-img" />
-          </div>
-
-          <div className="results-right">
-            {/* FEELINGS */}
-            <section className="results-feelings neon-minor">
-              <hr className="feel-hr"></hr>
-              <h4 className="results-header-space test-2 results-feel">
-                YOU MAKE ME FEEL
-              </h4>
-              <div className="results-feel-container">{feelingsMapper}</div>
-            </section>
             {/* RESULT TEXT */}
             <section className="results-type">
-              <hr className="results-type-hr"></hr>
+              {/* <hr className="results-type-hr"></hr> */}
               <h4 className="results-header-space neon-minor results-result">
                 MY RESULT FOR YOU
               </h4>
@@ -298,6 +327,116 @@ const Results = ({
           </div>
         </div>
 
+        {/* Three Columns for Horizontal Layout */}
+        <div className="three-cols">
+          {/* Left Column */}
+          <div className="col-left">
+            <div className="results-header results-padding">
+              <div>
+                <h2
+                  className={`neon-major results-friendname ${
+                    friendName.length > 9
+                      ? "results-friendname-long"
+                      : undefined
+                  }`}
+                >
+                  {/* {friendName} */}
+                  WWWWWWWWW
+                </h2>
+                <p
+                  className={`neon-minor results-description ${
+                    description.length < 35
+                      ? "results-desc-short"
+                      : "results-desc-long"
+                  }`}
+                >
+                  {description}
+                </p>
+              </div>
+            </div>
+            <div className="results-left">
+              {/* ADJECTIVES */}
+              {/* <div className="flex-holder-left"></div> */}
+              <section className="results-adjectives neon-minor">
+                <div className="results-header-space results-header-pair">
+                  <h4 className="neon-minor results-think">I THINK YOU ARE</h4>
+                  {/* <hr className="adj-hr"></hr> */}
+                </div>
+                <div className="results-adj-container">{adjectivesMapper}</div>
+              </section>
+              {/* EMOJI */}
+              <section className="results-emojis">
+                <div className="results-header-space results-header-pair">
+                  {/* <hr className="emoji-hr"></hr> */}
+                  <h4 className="neon-minor results-associate">
+                    I ASSOCIATE YOU WITH
+                  </h4>
+                </div>
+                <div className="results-emoji-container">{emojisMapper}</div>
+              </section>
+            </div>
+          </div>
+
+          {/* Middle Column */}
+          <div className="col-mid">
+            <div className="ring">
+              <img src={image} alt={image} className="results-img" />
+            </div>
+          </div>
+
+          {/* Right Column */}
+          <div className="col-right">
+            <div className="results-camera-kudogen">
+              {/* React says not to do below, but it's OK because href attribute will be set on click */}
+              <a
+                id="camera"
+                onClick={onButtonClick}
+                ref={cameraRef}
+                className="results-cam-link"
+              >
+                <img
+                  src={camera}
+                  alt="save result"
+                  className="results-camera"
+                />
+              </a>
+              <h3 className="results-kudogen">
+                <a href="/" className="results-kudogen-link" title="restart">
+                  KUDOGEN
+                </a>
+              </h3>
+            </div>
+            <div className="results-right">
+              {/* FEELINGS */}
+              {/* <div className="flex-holder-right"></div> */}
+              <section className="results-feelings neon-minor">
+                {/* <hr className="feel-hr"></hr> */}
+                <h4 className="results-header-space test-2 results-feel">
+                  YOU MAKE ME FEEL
+                </h4>
+                <div className="results-feel-container">{feelingsMapper}</div>
+              </section>
+              {/* RESULT TEXT */}
+              <section className="results-type">
+                {/* <hr className="results-type-hr"></hr> */}
+                <h4 className="results-header-space neon-minor results-result">
+                  MY RESULT FOR YOU
+                </h4>
+                <p
+                  className="results-type-p neon-minor"
+                  style={{
+                    color: `${color}`,
+                    textShadow: `0 0 2px ${color}, 0 0 2px ${color}, 0 0 2px ${color}, 0 0 0px ${color}`,
+                  }}
+                >
+                  {resultDesc}
+                </p>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        {/* IMAGE FOOTER */}
         <section className="results-image-footer">
           <p>
             Made for you by {name} at KUDOGEN. Generate a compliment for someone
@@ -308,8 +447,10 @@ const Results = ({
           </p>
         </section>
       </main>
+
+      {/* FOOTER */}
       <footer>
-        <ul className="footer-list">
+        <ul className="footer-list results-footer">
           <li>
             <Link to="/">Home</Link>
           </li>

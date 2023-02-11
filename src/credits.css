@@ -1,11 +1,11 @@
 .credits-page {
-  max-height: 100vh;
-  min-height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: black;
   color: #fff;
+  font-size: 2.5vw;
 }
 
 .credits-header {
@@ -15,14 +15,15 @@
 }
 
 .credits-header h1 {
+  font-size: 5vw;
   color: #fff;
 }
 
 .credits-page main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  /* flex-direction: column;
-  align-items: center; */
+  align-items: center;
   gap: 5vh;
 }
 
@@ -31,10 +32,45 @@
   color: rgb(240, 240, 240);
 }
 
-.credits-page p {
-  font-size: 5vh;
+.credits-flaticon {
+  margin-bottom: 5%;
 }
 
-.flex-jerryrig {
-  height: 10vh;
+.credits-images {
+  margin-bottom: 3%;
+}
+
+.credits-image-ul {
+  margin-left: 3%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 25vh;
+  list-style-type: disc;
+}
+
+.credits-image-ul li {
+  margin-bottom: 3%;
+  font-size: 2vw;
+}
+
+.credits-links a {
+  text-decoration: none;
+  color: #00b7bd;
+}
+
+.credits-links a:hover {
+  text-decoration: none;
+  color: #00f7ff;
+}
+
+.credits-page footer {
+  padding: 2%;
+  font-family: "V-Ger Grotesque", sans-serif;
+}
+
+.credits-page footer ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
