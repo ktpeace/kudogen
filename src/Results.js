@@ -340,8 +340,7 @@ const Results = ({
                       : undefined
                   }`}
                 >
-                  {/* {friendName} */}
-                  WWWWWWWWW
+                  {friendName}
                 </h2>
                 <p
                   className={`neon-minor results-description ${

@@ -227,12 +227,18 @@ body,
 /* MEDIA QUERIES */
 /***** 1px *****/
 @media (min-width: 1px) {
+  .neon-major {
+    text-shadow: 0 0 4px #90fbff, 0 0 1px #90fbff, 0 0 4px #90fbff,
+      0 0 0px #90fbff;
+  }
+
   .three-cols {
     display: none;
   }
 
   .four-rows {
-    height: 100%;
+    height: 100vh;
+    height: --webkit-fill-available;
     margin: 1vh 1vh;
     display: flex;
     flex-direction: column;
@@ -368,6 +374,11 @@ body,
 /***** 500px *****/
 /* SWITCH TO VERTICAL */
 @media (min-width: 500px) {
+  .neon-major {
+    text-shadow: 0 0 7px #90fbff, 0 0 1px #90fbff, 0 0 7px #90fbff,
+      0 0 0px #90fbff;
+  }
+
   .four-rows {
     margin: 2vh 2vh;
     gap: 0.1vh;
