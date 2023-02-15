@@ -414,10 +414,15 @@ const Results = ({
                   src={camera}
                   alt="save result"
                   className="results-camera"
+                  title="save image"
                 />
               </a>
               <h3 className="results-kudogen">
-                <a href="/" className="results-kudogen-link" title="restart">
+                <a
+                  href="/kudogen"
+                  className="results-kudogen-link"
+                  title="restart"
+                >
                   KUDOGEN
                 </a>
               </h3>
