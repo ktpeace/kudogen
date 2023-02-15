@@ -41,9 +41,18 @@ const Results = ({
   // friendName = "WWWWWWWWWWWWWW";
   // description =
   //   "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW";
-  // https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
-  // let vh = window.innerHeight * 0.01;
-  // document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+  // First we get the viewport height and multiply it by 1% to get a value for a vh unit
+  let vh = window.innerHeight * 0.01;
+  // Then we set the value in the --vh custom property to the root of the document
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+  // We listen to the resize event
+  window.addEventListener("resize", () => {
+    // We execute the same script as before
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  });
+
   // capture DOM element containing content to become image for downloading, and DOM camera icon for setting download
   const imageRef = useRef(null);
   const cameraRef = useRef(null);
@@ -62,7 +71,10 @@ const Results = ({
       // set href to image data and add download attribute to camera anchor
       toPng(imageRef.current, { cacheBust: true, filter: filter })
         .then((dataUrl) => {
-          cam.setAttribute("download", "kudogen-result.png");
+          cam.setAttribute(
+            "download",
+            `kudogen-result-${friendName.toLowerCase()}.png`
+          );
           cam.setAttribute("href", dataUrl);
           console.log(cameraRef.current);
           cameraRef.current.click();
@@ -440,12 +452,20 @@ const Results = ({
           <p>
             Made for you by {name} at KUDOGEN. Generate a compliment for someone
             you know at{" "}
-            <a href="/" className="results-home-ad">
+            <a href="/kudogen" className="results-home-ad">
               https://ktpeace.github.io/kudogen/
             </a>
           </p>
         </section>
       </main>
+
+      <section className="snapshot-mobile">
+        <h3>On mobile?</h3>
+        <p>
+          On Android or iPhone, press the power button + volume simultaneously
+          to take a screenshot! (Power + home on iPad.)
+        </p>
+      </section>
 
       {/* FOOTER */}
       <footer>
@@ -460,7 +480,13 @@ const Results = ({
             <Link to="/credits">Credits</Link>
           </li>
           <li>
-            <a href="https://github.com/ktpeace">©️ 2023 KAT PEACE</a>
+            <a
+              href="https://github.com/ktpeace"
+              target="_blank"
+              rel="noreferrer"
+            >
+              ©️ 2023 KAT PEACE
+            </a>
           </li>
         </ul>
       </footer>

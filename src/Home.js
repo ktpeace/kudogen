@@ -356,53 +356,57 @@ const Home = ({ formEntries, setFormEntries }) => {
             </div>
           </section>
           {/* EMOJI */}
-          <div className="emoji-line">😁🤩🤔🤪🥸🤓🤠🤧</div>
+          <div className="emoji-line">😁🤩🤔🤪🥳🤓🤠🤧</div>
           <h3 className="header-text emoji-header" id="emojis">
             Emoji time! Which of these do you most associate with{" "}
-            {friendName ? friendName : "your friend"}? Pick {emojiMax}:
+            {friendName ? friendName : "your friend"}? Pick {emojiMax} total:
           </h3>
           <div className="emoji-categories">
-            <div className="emoji-col-container">
-              <h4>Elements</h4>
-              <div className="emoji-cols">
-                <div className="emoji-col">
-                  <EmojiGenerator emojiList={emojiList1a} />
+            <div className="emoji-col-pair">
+              <div className="emoji-col-container">
+                <h4>Elements</h4>
+                <div className="emoji-cols">
+                  <div className="emoji-col">
+                    <EmojiGenerator emojiList={emojiList1a} />
+                  </div>
+                  <div className="emoji-col">
+                    <EmojiGenerator emojiList={emojiList1b} />
+                  </div>
                 </div>
-                <div className="emoji-col">
-                  <EmojiGenerator emojiList={emojiList1b} />
+              </div>
+              <div className="emoji-col-container">
+                <h4>Animals</h4>
+                <div className="emoji-cols">
+                  <div className="emoji-col">
+                    <EmojiGenerator emojiList={emojiList2a} />
+                  </div>
+                  <div className="emoji-col">
+                    <EmojiGenerator emojiList={emojiList2b} />
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="emoji-col-container">
-              <h4>Animals</h4>
-              <div className="emoji-cols">
-                <div className="emoji-col">
-                  <EmojiGenerator emojiList={emojiList2a} />
-                </div>
-                <div className="emoji-col">
-                  <EmojiGenerator emojiList={emojiList2b} />
-                </div>
-              </div>
-            </div>
-            <div className="emoji-col-container">
-              <h4>Activities</h4>
-              <div className="emoji-cols">
-                <div className="emoji-col">
-                  <EmojiGenerator emojiList={emojiList3a} />
-                </div>
-                <div className="emoji-col">
-                  <EmojiGenerator emojiList={emojiList3b} />
+            <div className="emoji-col-pair">
+              <div className="emoji-col-container">
+                <h4>Activities</h4>
+                <div className="emoji-cols">
+                  <div className="emoji-col">
+                    <EmojiGenerator emojiList={emojiList3a} />
+                  </div>
+                  <div className="emoji-col">
+                    <EmojiGenerator emojiList={emojiList3b} />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="emoji-col-container">
-              <h4>Interests</h4>
-              <div className="emoji-cols">
-                <div className="emoji-col">
-                  <EmojiGenerator emojiList={emojiList4a} />
-                </div>
-                <div className="emoji-col">
-                  <EmojiGenerator emojiList={emojiList4b} />
+              <div className="emoji-col-container">
+                <h4>Interests</h4>
+                <div className="emoji-cols">
+                  <div className="emoji-col">
+                    <EmojiGenerator emojiList={emojiList4a} />
+                  </div>
+                  <div className="emoji-col">
+                    <EmojiGenerator emojiList={emojiList4b} />
+                  </div>
                 </div>
               </div>
             </div>
@@ -467,7 +471,13 @@ const Home = ({ formEntries, setFormEntries }) => {
             <Link to="/credits">Credits</Link>
           </li>
           <li>
-            <a href="https://github.com/ktpeace">©️ 2023 KAT PEACE</a>
+            <a
+              href="https://github.com/ktpeace"
+              target="_blank"
+              rel="noreferrer"
+            >
+              ©️ 2023 KAT PEACE
+            </a>
           </li>
         </ul>
       </footer>

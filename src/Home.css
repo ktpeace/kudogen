@@ -639,7 +639,7 @@ footer Link:hover {
 } */
 
 /* MEDIA QUERIES */
-@media (min-width: 280px) {
+@media (min-width: 1px) {
   html,
   body,
   #root,
@@ -842,15 +842,7 @@ footer Link:hover {
     color: #fff;
   }
 
-  /* .home-button:hover {
-    border: 2px solid #8a9099;
-    background-color: #8a9099;
-    cursor: pointer;
-  } */
-
   .home-button-selected {
-    /* background-color: #000;
-    border: 2px solid #000; */
     border: 2px solid #8a9099;
     background-color: #8a9099;
   }
@@ -861,7 +853,6 @@ footer Link:hover {
     top: 12vw;
     transform: rotate(-31deg);
     border-radius: 5px;
-    /* background-color: blue; */
     background-color: #8a9099;
     color: #fff;
   }
@@ -897,20 +888,6 @@ footer Link:hover {
     display: none;
   }
 
-  /* .home-main path:hover {
-    stroke: #fff;
-    stroke-width: 7px;
-  }
-
-  .color-selected {
-    stroke: #fff;
-    stroke-width: 7px;
-  }
-
-  .color-splash:hover {
-    cursor: pointer;
-  } */
-
   .gimme {
     align-self: flex-end;
     margin-top: 3vh;
@@ -922,7 +899,13 @@ footer Link:hover {
     color: #00f7ff;
   }
 
-  /* Descriptions */
+  /* Description */
+
+  .header-text {
+    margin: 0 10vw;
+    line-height: 1.4;
+    text-align: center;
+  }
 
   .description-container {
     padding: 10vh 5vw;
@@ -1017,6 +1000,7 @@ footer Link:hover {
     justify-content: center;
     gap: 0.3vh;
     font-size: 9vw;
+    margin-bottom: 20px;
   }
 
   .emoji-div {
@@ -1141,7 +1125,676 @@ footer Link:hover {
   }
 }
 
-@media (min-width: 550px) {
+@media (min-width: 500px) {
+  /* Header */
+  .home-header-text {
+    height: 100%;
+    max-width: 80vw;
+    justify-content: space-between;
+  }
+
+  .circle-1 {
+    top: -9vw;
+    left: -2.6vw;
+    height: 24vw;
+    width: 24vw;
+  }
+
+  .circle-2 {
+    top: -3vw;
+    right: -12vw;
+    height: 46vw;
+    width: 46vw;
+  }
+
+  /* Names */
+
+  .name-set input {
+    margin-left: 2vw;
+    padding: 7vh 0 0 0;
+    width: 70vw;
+    height: 7vh;
+    font-size: 8vw;
+  }
+
+  /* Wavy */
+
+  .wavy {
+    width: 100vw;
+    height: 40vw;
+    margin-bottom: 7vh;
+  }
+
+  .star {
+    width: 12%;
+  }
+
+  .wavy-bottom {
+    margin-bottom: -30vh;
+  }
+
+  /* Names */
+  .get-started {
+    left: -30vw;
+    top: -5vh;
+    bottom: 0;
+    transform: rotate(-10deg);
+    font-size: 3.5vw;
+  }
+
+  /* Adjectives */
+  .adj-header {
+    margin-bottom: 9vh;
+  }
+
+  /* Swell */
+
+  .swell-container {
+    top: 8.5vh;
+    transform: rotate(-28deg);
+  }
+
+  .swell {
+    font-size: 7vw;
+  }
+
+  /* Description */
+
+  #description {
+    font-size: 4vw;
+  }
+
+  /* Emoji */
+  .emoji-line {
+    bottom: 4vh;
+    font-size: 7vw;
+  }
+
+  .emoji-header {
+    padding-top: 12vh;
+    margin-bottom: 10vh;
+    font-size: 6vw;
+  }
+
+  .emoji-categories {
+    gap: 7vw;
+    margin-bottom: 10vh;
+    font-size: 5vw;
+  }
+
+  .emoji-col-pair {
+    display: flex;
+    gap: 10vw;
+  }
+
+  .emoji-col-container {
+    gap: 4vh;
+  }
+
+  .emoji-cols {
+    gap: 1vw;
+  }
+
+  .emoji-col {
+    gap: 1vh;
+    font-size: 8vw;
+  }
+
+  .emoji-div {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  /* Submit */
+  .submit-header {
+    left: -120px;
+    bottom: 10px;
+  }
+}
+
+@media (min-width: 700px) {
+  /* Header */
+  .home-header-text {
+    height: 100%;
+    margin-top: 2vh;
+    display: flex;
+    align-items: space-between;
+    gap: 25vw;
+  }
+
+  .home-header h1 {
+    padding-top: 0.5vw;
+    font-size: 8vw;
+    letter-spacing: 0.9vw;
+  }
+
+  .home-header h2 {
+    font-size: 5vw;
+    line-height: 1.5;
+  }
+
+  .circle-1 {
+    top: -9vw;
+    left: -2.6vw;
+    height: 24vw;
+    width: 24vw;
+  }
+
+  .circle-2 {
+    top: -3vw;
+    right: -12vw;
+    height: 46vw;
+    width: 46vw;
+  }
+
+  /* Get Started */
+  .get-started {
+    position: relative;
+    left: -35vw;
+    top: -5vh;
+    bottom: 0;
+    transform: rotate(-10deg);
+    font-size: 2vw;
+  }
+
+  .name-set {
+    width: 75vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 5vw;
+    padding: 0;
+  }
+
+  .name-set input {
+    margin-left: 2vw;
+    padding: 3vh 0;
+    width: 34vw;
+    height: 6vh;
+    outline: none;
+    border: none;
+    border-bottom: 1vh solid black;
+    font-size: 5vw;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+  }
+
+  .username-set {
+    margin-bottom: 5vw;
+  }
+
+  .friendname-set {
+    margin-bottom: 7vw;
+  }
+
+  /* Greeting */
+  .wavy {
+    width: 100vw;
+    height: 40vw;
+    margin-bottom: 7vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 4vw;
+    /* source for below: https://css-generators.com/wavy-shapes */
+    --mask: radial-gradient(154.29px at 50% 207px, #000 99%, #0000 101%)
+        calc(50% - 138px) 0/276px 51% repeat-x,
+      radial-gradient(154.29px at 50% -138px, #0000 99%, #000 101%) 50% 69px/276px
+        calc(51% - 69px) repeat-x,
+      radial-gradient(154.29px at 50% calc(100% - 207px), #000 99%, #0000 101%)
+        calc(50% - 138px) 100%/276px 51% repeat-x,
+      radial-gradient(154.29px at 50% calc(100% + 138px), #0000 99%, #000 101%)
+        50% calc(100% - 69px) / 276px calc(51% - 69px) repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+  }
+
+  .star {
+    object-fit: contain;
+    width: 9%;
+    height: auto;
+    position: relative;
+  }
+
+  .star-1 {
+    bottom: 2vw;
+  }
+
+  .star-2 {
+    top: 9vw;
+  }
+
+  .wavy p {
+    margin: 0 6vw;
+  }
+
+  .greeting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+    max-width: 80vw;
+    font-size: 6vw;
+  }
+
+  .greeting-name {
+    font-size: 5vw;
+    white-space: initial;
+    word-wrap: normal;
+    max-width: initial;
+  }
+
+  /* Adjectives */
+  .adj-header {
+    margin-bottom: 9vh;
+    font-size: 5vw;
+  }
+
+  .buttons {
+    margin: 0 10vw;
+    margin-bottom: 3vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3vw;
+  }
+
+  .home-button {
+    padding: 5px 10px;
+    border-radius: 25px;
+    font-family: "Rubik", sans-serif;
+    font-size: 30px;
+    background-color: #000;
+    color: #fff;
+  }
+
+  /* .home-button:hover {
+    border: 2px solid #8a9099;
+    background-color: #8a9099;
+    cursor: pointer;
+  } */
+
+  .home-button-selected {
+    border: 2px solid #8a9099;
+    background-color: #8a9099;
+  }
+
+  .swell-container {
+    padding: 2rem;
+    position: relative;
+    top: 10vh;
+    transform: rotate(-25deg);
+    border-radius: 5px;
+    background-color: #8a9099;
+    color: #fff;
+    font-size: 5vw;
+  }
+
+  .swell {
+    font-size: 5vw;
+  }
+
+  .feelings-button {
+    background-color: #fff;
+    color: #000;
+  }
+
+  /* Colors */
+  .colors-section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30vh;
+    padding-bottom: 15vh;
+    background-color: #000;
+    color: #fff;
+    font-size: 5vw;
+  }
+
+  .color-splashes {
+    margin: 0 10vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .color-splash:last-of-type {
+    display: block;
+  }
+
+  .color-splash {
+    height: 15vw;
+    width: 15vw;
+  }
+
+  .home-main path:hover {
+    stroke: #fff;
+    stroke-width: 7px;
+  }
+
+  .color-selected {
+    stroke: #fff;
+    stroke-width: 7px;
+  }
+
+  .color-splash:hover {
+    cursor: pointer;
+  }
+
+  .gimme {
+    align-self: flex-end;
+    margin-top: 3vh;
+    margin-right: 15vw;
+    font-size: 2vw;
+  }
+
+  /* Description */
+
+  .description-container {
+    padding: 20vh 5vw;
+    gap: 6vh;
+    line-height: 1.4;
+  }
+
+  .description-header {
+    font-size: 5vw;
+  }
+
+  #description {
+    margin: 0 12vw;
+    padding: 3vh;
+    border-radius: 8px;
+    font-size: 3vw;
+    max-width: 60vw;
+  }
+
+  /* FEELINGS */
+
+  .feelings-container {
+    padding: 20vh 0;
+    display: flex;
+    flex-direction: column;
+    gap: 9vh;
+    font-size: 5vw;
+    background-color: #000;
+    color: white;
+  }
+
+  .feelings-button {
+    background-color: #fff;
+    color: #000;
+    /* border: 2px solid white; */
+  }
+
+  .feelings-button-selected {
+    border: 2px solid #8a9099;
+    background-color: #8a9099;
+  }
+
+  /* EMOJIS */
+
+  .emoji-line {
+    bottom: 4vh;
+    font-size: 6vw;
+  }
+
+  .emoji-header {
+    padding-top: 12vh;
+    margin-bottom: 10vh;
+    font-size: 5vw;
+  }
+
+  .emoji-categories {
+    display: flex;
+    gap: 3vw;
+    margin-bottom: 10vh;
+    text-transform: uppercase;
+    font-size: 3.7vw;
+  }
+
+  .emoji-col-pair {
+    gap: 12vw;
+  }
+
+  .emoji-col-container {
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+  }
+
+  .emoji-cols {
+    justify-content: center;
+    gap: 2vw;
+  }
+
+  .emoji-col {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+    font-size: 7vw;
+  }
+
+  .emoji-div {
+    width: 7rem;
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 4px solid #fff;
+    border-radius: 50%;
+  }
+
+  /* .emoji-div:hover {
+    background-color: #b9f0f1;
+    border: 4px solid #00f7ff;
+    cursor: pointer;
+  } */
+
+  .emoji-selected {
+    background-color: #b9f0f1;
+    border: 4px solid #00f7ff;
+    cursor: pointer;
+  }
+
+  /* SUBMISSION */
+
+  .wavy-bottom {
+    margin-bottom: -30vh;
+    position: relative;
+    z-index: -1;
+  }
+
+  .missingRequiredFields {
+    display: flex;
+    justify-content: center;
+    gap: 0.5vw;
+    width: 55vw;
+    font-weight: 400;
+    font-size: 1.5vw;
+    color: rgb(255, 166, 0);
+  }
+
+  .missingRequiredFields a {
+    color: rgb(255, 166, 0);
+    font-weight: 600;
+  }
+
+  .submit-container {
+    width: 100vw;
+    padding-top: 20vh;
+    padding-bottom: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9vh;
+    background-color: #000;
+    color: white;
+  }
+
+  .submit-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    bottom: 20px;
+    left: -200px;
+    transform: rotate(-20deg);
+    font-size: 3.5vw;
+    line-height: 1.6;
+  }
+
+  .submit-button {
+    padding: 2vw 0;
+    width: 55vw;
+    border: 3px solid #000;
+    border-radius: 50px;
+    font-family: "V-Ger Grotesque", sans-serif;
+    font-size: 3vw;
+    font-weight: 800;
+    letter-spacing: 0.7rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+    background-color: #00f7ff;
+    color: #000;
+  }
+
+  .submit-button:hover {
+    cursor: pointer;
+    border: 3px solid #00f7ff;
+    background-color: #000;
+    color: #00f7ff;
+  }
+
+  footer {
+    padding-top: 2vh;
+    padding-bottom: 5vh;
+    background-color: #8a9099;
+  }
+
+  .footer-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  footer a,
+  footer Link {
+    font-size: 2vw;
+    text-decoration: none;
+    color: #45474b;
+    text-transform: uppercase;
+    font-family: "V-Ger Grotesque", sans-serif;
+  }
+
+  footer a:hover,
+  footer Link:hover {
+    color: #000;
+  }
+}
+
+@media (min-width: 1000px) {
+  /* Header */
+  .home-header-text {
+    display: block;
+  }
+
+  .home-header h1 {
+    margin-left: 0;
+    writing-mode: horizontal-tb;
+    font-size: 10vw;
+  }
+
+  .home-header h2 {
+    margin-top: 3vw;
+    min-width: 40vw;
+    text-align: start;
+    font-size: 5.5vw;
+    line-height: 1.5;
+  }
+
+  .home-word-image {
+    display: inline;
+  }
+
+  .desktop-split {
+    display: block;
+  }
+
+  .home-turquoise-text {
+    color: white;
+  }
+
+  .mobile-text-break-shown {
+    display: none;
+  }
+
+  .mobile-text-break-hidden {
+    display: block;
+  }
+
+  .prevent-break {
+    display: flex;
+  }
+
+  .whomever {
+    display: block;
+    top: 43vw;
+    left: 57vw;
+    transform: rotate(29deg);
+    font-size: 1.7vw;
+    color: white;
+  }
+
+  .pointer {
+    display: block;
+    top: 46vw;
+    left: 57vw;
+    width: 3.5vw;
+    transform: rotate(-10deg);
+  }
+
+  .circle-1 {
+    top: -9vw;
+    left: -2.6vw;
+    height: 24vw;
+    width: 24vw;
+  }
+
+  .circle-2 {
+    top: -3vw;
+    right: -12vw;
+    height: 46vw;
+    width: 46vw;
+  }
+
+  .turquoise-text {
+    color: #00f7ff;
+  }
+
+  /* Description */
+  #description {
+    padding: 2vh 4vh 7vh 4vh;
+    font-size: 3vw;
+  }
+
+  /* Emoji */
+  .emoji-div {
+    width: 6.7rem;
+    height: 6.7rem;
+  }
+
+  /* Submission */
+  .wavy-bottom {
+    margin-bottom: -45vh;
+    position: relative;
+    z-index: -1;
+  }
+}
+
+@media (min-width: 1300px) {
   /* Hovers */
   .home-main path:hover {
     stroke: #fff;
@@ -1171,10 +1824,6 @@ footer Link:hover {
   }
 
   /* Header */
-  .home-header-text {
-    display: block;
-  }
-
   .home-header h1 {
     margin-left: 0;
     writing-mode: horizontal-tb;
@@ -1186,30 +1835,6 @@ footer Link:hover {
     text-align: start;
     font-size: 5vw;
     line-height: 1.3;
-  }
-
-  .home-word-image {
-    display: inline;
-  }
-
-  .desktop-split {
-    display: block;
-  }
-
-  .home-turquoise-text {
-    color: white;
-  }
-
-  .mobile-text-break-shown {
-    display: none;
-  }
-
-  .mobile-text-break-hidden {
-    display: block;
-  }
-
-  .prevent-break {
-    display: flex;
   }
 
   .whomever {
@@ -1227,24 +1852,6 @@ footer Link:hover {
     left: 51vw;
     width: 3.5vw;
     transform: rotate(-10deg);
-  }
-
-  .circle-1 {
-    top: -9vw;
-    left: -2.6vw;
-    height: 24vw;
-    width: 24vw;
-  }
-
-  .circle-2 {
-    top: -3vw;
-    right: -12vw;
-    height: 46vw;
-    width: 46vw;
-  }
-
-  .turquoise-text {
-    color: #00f7ff;
   }
 
   /* Get Started */
@@ -1512,11 +2119,15 @@ footer Link:hover {
 
   .emoji-categories {
     display: flex;
-    /* flex-wrap: nowrap; */
-    gap: 7vw;
+    gap: 5vw;
     margin-bottom: 10vh;
     text-transform: uppercase;
     font-size: 3vw;
+  }
+
+  .emoji-col-pair {
+    display: flex;
+    gap: 5vw;
   }
 
   .emoji-col-container {
@@ -1658,5 +2269,27 @@ footer Link:hover {
   footer a:hover,
   footer Link:hover {
     color: #000;
+  }
+}
+
+@media (min-width: 2000px) {
+  .home-button {
+    font-size: 60px;
+  }
+
+  .emoji-div {
+    width: 9rem;
+    height: 9rem;
+  }
+}
+
+@media (min-width: 2500px) {
+  .home-button {
+    font-size: 70px;
+  }
+
+  .emoji-div {
+    width: 13rem;
+    height: 13rem;
   }
 }

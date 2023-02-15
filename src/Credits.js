@@ -81,7 +81,13 @@ const Credits = () => {
             <Link to="/credits">Credits</Link>
           </li>
           <li>
-            <a href="https://github.com/ktpeace">©️ 2023 KAT PEACE</a>
+            <a
+              href="https://github.com/ktpeace"
+              target="_blank"
+              rel="noreferrer"
+            >
+              ©️ 2023 KAT PEACE
+            </a>
           </li>
         </ul>
       </footer>

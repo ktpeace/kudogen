@@ -4,19 +4,15 @@ This will be a compliment generator for people you know. It's a fun combination 
 
 ![screenshot](./home-screenshot.jpg "home top screenshot")
 
-- Live site: ![live site](https://ktpeace.github.io/kudogen/)
+[🧾 Live Site](https://ktpeace.github.io/kudogen/)
 
-## TO DO AS OF 1/28
-
-### IMMEDIATE
-
-- make responsive
-- make camera button save to images for mobile
+## TO DO AS OF 2/15
 
 ### NEXT
 
 - fine-tune results appearance
 - make darker colors lighter
+- make camera button save to images for mobile
 
 ### LATER
 
@@ -24,7 +20,7 @@ This will be a compliment generator for people you know. It's a fun combination 
 - move defaults to original states in code files
 - add reset button for adjs + feelings
 - handle a default routing/404 case
-- why can't I right click open submit button
+- enable right click open submit button
 - add more feelings
 - make emojis variable
 - make sure results starts with scrollbar at top

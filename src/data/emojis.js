@@ -1,6 +1,6 @@
 // nature
 export const emojiList1a = [
-  "🪴",
+  "🌱",
   "🍀",
   "🌹",
   "🦴",
