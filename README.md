@@ -1,8 +1,8 @@
 # KUDOGEN
 
-This is a compliment generator for people you know. It's a fun combination of direct input and unpredictable results, half user prompts and half personality test for a third party.
-
 ## [🏠 Live Site](https://ktpeace.github.io/kudogen/)
+
+This is a compliment generator for people you know. It's a fun combination of direct input and unpredictable results, half user prompts and half personality test for a third party.
 
 ![screenshot](./home-screenshot.jpg "home top screenshot")
 
