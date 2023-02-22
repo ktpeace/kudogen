@@ -11,6 +11,7 @@ This will be a compliment generator for people you know. It's a fun combination 
 - Takes in user inputs and calculates a matching image/result description
 - Passes other user inputs in directly to result image
 - Responsive, with a separate mobile design
+- Allows desktop users to click a camera icon to download image
 
 ## Built with
 
