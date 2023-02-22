@@ -4,7 +4,7 @@ This will be a compliment generator for people you know. It's a fun combination 
 
 ![screenshot](./home-screenshot.jpg "home top screenshot")
 
-## [⚡ Live Site](https://ktpeace.github.io/kudogen/)
+## [⚡ Live Site here](https://ktpeace.github.io/kudogen/)
 
 ## Features
 
