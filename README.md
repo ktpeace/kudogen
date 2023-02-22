@@ -46,3 +46,4 @@ Displays optimal layout based on device screen size
 - remove unnecessary dependencies like htmltocanvas
 - change colors to not need to plug in hashtags so any color format works in arrays
 - refactor code
+- replace image saving with a unique link
