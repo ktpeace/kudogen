@@ -30,6 +30,7 @@ This will be a compliment generator for people you know. It's a fun combination 
 - Increase submit button size to contain longer names on mobile
 - fine-tune results appearance (extra space on left side in desktop, awkward appearance around 1000px width)
 - make darker colors lighter
+- test + improve accessibility
 - make camera button save to images for mobile
 
 ### LATER
