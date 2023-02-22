@@ -8,10 +8,9 @@ This will be a compliment generator for people you know. It's a fun combination 
 
 ## Features
 
-Calculates correct tip & total cost of a bill per person
-Handles input errors & alerts user
-Allows user to reset values
-Displays optimal layout based on device screen size
+- Takes in user inputs and calculates a matching image/result description
+- Passes other user inputs in directly to result image
+- Responsive, with a separate mobile design
 
 ## Built with
 
