@@ -6,11 +6,26 @@ This will be a compliment generator for people you know. It's a fun combination 
 
 ## [🧾 Live Site](https://ktpeace.github.io/kudogen/)
 
-## TO DO AS OF 2/15
+## Features
+
+Calculates correct tip & total cost of a bill per person
+Handles input errors & alerts user
+Allows user to reset values
+Displays optimal layout based on device screen size
+
+## Built with
+
+![Canva](https://img.shields.io/badge/Canva-00C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white) - wireframing/design
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) - site construction
+![Github Pages](https://img.shields.io/badge/GitHub%20Pages-222222.svg?style=for-the-badge&logo=GitHub-Pages&logoColor=white) - live site hosting
+![Fly.io](https://img.shields.io/static/v1?label=&message=htmlToImage&color=brightgreen&style=for-the-badge) - lets users save result as image from desktop
+
+## Future Improvements
 
 ### NEXT
 
-- fine-tune results appearance
+- Increase submit button size to contain longer names on mobile
+- fine-tune results appearance (extra space on left side in desktop, awkward appearance around 1000px width)
 - make darker colors lighter
 - make camera button save to images for mobile
 
